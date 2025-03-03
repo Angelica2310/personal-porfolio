@@ -1,14 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Charm } from "next/font/google";
 import "./globals.css";
+import NavBar from "../components/NavBar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const charm = Charm({
+  variable: "--font-charm",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata = {
@@ -19,9 +16,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${charm.variable}`}>
+        <NavBar />
         {children}
       </body>
     </html>
