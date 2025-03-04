@@ -9,7 +9,7 @@ export default function ActiveLink({ href, children, variant }) {
 
   const styles = {
     navBar: isActive
-      ? "border-2 border-[--pink] cursor-pointer p-1 w-fit text-[--grey]"
+      ? "border-2 border-[--pink] cursor-pointer p-1 w-fit text-[--grey] rounded-lg"
       : "cursor-pointer p-1 w-fit",
   };
 

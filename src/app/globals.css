@@ -36,3 +36,23 @@ body {
 canvas {
   height: 70vh !important;
 }
+
+.connection-icon {
+  border: 1px solid var(--pink);
+  padding: 5px;
+  border-radius: 50%;
+
+  box-sizing: border-box;
+  cursor: pointer;
+  flex-shrink: 0;
+  text-align: center;
+  transition: all 0.5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.connection-icon:hover {
+  box-shadow: var(--pink) 0 1px 30px;
+  transition-duration: 0.1s;
+}

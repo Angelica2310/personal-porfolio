@@ -1,6 +1,7 @@
 import { Charm } from "next/font/google";
 import "./globals.css";
 import NavBar from "../components/NavBar";
+import Footer from "@/components/Footer";
 
 const charm = Charm({
   variable: "--font-charm",
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       <body className={`${charm.variable}`}>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -1,6 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ActiveLink from "./ActiveLink";
 import {
   House,
@@ -13,8 +14,27 @@ import {
 import MenuPage from "./MenuDropDown";
 
 export default function NavBar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("remove", handleScroll);
+  }, []);
+
   return (
-    <div className="grid grid-cols-2 items-center bg-[rgba(195,79,90,0.3)] md:bg-transparent">
+    //  bg-[rgba(195,79,90,0.3)]
+    <div
+      className={`grid grid-cols-2 items-center z-50 transition-all duration-300 top-0 fixed w-screen ${
+        scrolled ? "bg-[rgba(195,79,90,0.3)]" : ""
+      }`}
+    >
       <div className="lg:pl-20 pl-5">
         <ActiveLink href="/">
           <Image

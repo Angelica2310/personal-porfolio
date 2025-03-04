@@ -1,4 +1,6 @@
 // import GenerateModel from "@/components/GenerateModel";
+import ConnectMe from "@/components/ConnectMe";
+import Introduce from "@/components/Introduce";
 import Introduction from "@/components/Introduction";
 import React from "react";
 
@@ -9,6 +11,8 @@ export default function HomePage() {
     <div className="">
       <Introduction />
       {/* <MemoizedGenerateModel /> */}
+      <Introduce />
+      <ConnectMe />
     </div>
   );
 }
