@@ -10,7 +10,7 @@ function GenerateModel() {
     <>
       <Canvas>
         <ambientLight intensity={0.5} />
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={true} />
         <Suspense fallback={null}>
           <Computer />
         </Suspense>

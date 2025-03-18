@@ -57,9 +57,9 @@ export default function Model(props) {
     <group {...props} dispose={null}>
       <group
         // scale={0.3}
-        position={isTablet ? [2.5, -0.1, -10] : [0.1, -1.5, -10]}
-        rotation={isTablet ? [0.4, -0.2, 0] : [0.4, -0.4, 0]}
-        scale={isTablet ? 0.9 : 1.3}
+        position={isTablet ? [2, -2.1, -10] : [0.1, -2.7, -6.7]}
+        rotation={isTablet ? [0.4, -0.2, 0] : [0.3, -0.4, 0]}
+        scale={isTablet ? 0.9 : 1.1}
         // position={[x.positionX, x.positionY, x.positionZ]}
         // rotation={[x.rotationX, x.rotationY, x.rotationZ]}
         // scale={x.scale}

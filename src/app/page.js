@@ -1,16 +1,14 @@
-// import GenerateModel from "@/components/GenerateModel";
 import ConnectMe from "@/components/ConnectMe";
 import Introduce from "@/components/Introduce";
 import Introduction from "@/components/Introduction";
-import React from "react";
-
-// const MemoizedGenerateModel = React.memo(GenerateModel);
+import "./globals.css";
+import { Flex } from "@chakra-ui/react";
+import BackgroundBox from "@/components/BackgroundBox";
 
 export default function HomePage() {
   return (
-    <div className="">
+    <div>
       <Introduction />
-      {/* <MemoizedGenerateModel /> */}
       <Introduce />
       <ConnectMe />
     </div>

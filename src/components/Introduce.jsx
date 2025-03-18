@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Introduce() {
   return (
-    <div className="grid md:grid-cols-[2fr_1fr] p-4 items-center">
+    <div className="grid md:grid-cols-[2fr_1fr] p-4 items-center md:pt-[10%]">
       <div className="pl-10 lg:pl-40">
         <p className="self-center text-4xl md:text-5xl md:self-start uppercase font-serif mb-7">
           Let me <span className="text-[--grey]">introduce</span> myself

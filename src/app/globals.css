@@ -16,21 +16,24 @@
 } */
 
 html,
-body {
-  overflow-x: hidden;
+body,
+#root {
+  /* width: 100%;
+  height: 100%; */
+  position: relative;
 }
 
 body {
   color: var(--pink);
   background: var(--background);
   font-family: charm;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   background-image: url("/background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 canvas {
@@ -55,4 +58,251 @@ canvas {
 .connection-icon:hover {
   box-shadow: var(--pink) 0 1px 30px;
   transition-duration: 0.1s;
+}
+
+/* METEOR PINK */
+
+.meteorP-ani-1 {
+  animation: 20s linear kf-meteorB-1 infinite;
+}
+
+.meteorP-ani-2 {
+  animation: 20s linear kf-meteorB-2 infinite;
+  animation-delay: 5s;
+}
+
+.meteorW-ani-1 {
+  animation: 20s linear kf-meteorP-1 infinite;
+  animation-delay: 10s;
+}
+
+.meteorW-ani-2 {
+  animation: 20s linear kf-meteorP-2 infinite;
+  animation-delay: 15s;
+}
+
+@keyframes kf-meteorB-1 {
+  0% {
+    translate: -50% -50%;
+    opacity: 1;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  10% {
+    translate: 50% 50%;
+    opacity: 0;
+  }
+
+  100% {
+    translate: 50% 50%;
+    opacity: 0;
+  }
+}
+
+@keyframes kf-meteorB-2 {
+  0% {
+    translate: 10% -50%;
+    opacity: 1;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  10% {
+    translate: 110% 50%;
+    opacity: 0;
+  }
+
+  100% {
+    translate: 110% 50%;
+    opacity: 0;
+  }
+}
+
+/* METEOR WHITE */
+
+@keyframes kf-meteorP-1 {
+  0% {
+    translate: -50% -10%;
+    opacity: 1;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  10% {
+    translate: 50% 90%;
+    opacity: 0;
+  }
+
+  100% {
+    translate: 50% 90%;
+    opacity: 0;
+  }
+}
+
+@keyframes kf-meteorP-2 {
+  0% {
+    translate: -40% -50%;
+    opacity: 1;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  10% {
+    translate: 70% 50%;
+    opacity: 0;
+  }
+
+  100% {
+    translate: 70% 50%;
+    opacity: 0;
+  }
+}
+
+/* STARS */
+
+.star-ani-1 {
+  animation: 10s linear kf-star-1 infinite;
+}
+
+.star-ani-2 {
+  animation: 10s linear kf-star-1 infinite;
+  animation-duration: 10s;
+  animation-delay: 1s;
+}
+
+.star-ani-3 {
+  animation: 10s linear kf-star-1 infinite;
+  animation-duration: 13s;
+  animation-delay: 2s;
+}
+
+.star-ani-4 {
+  animation: 10s linear kf-star-1 infinite;
+  animation-duration: 11s;
+  animation-delay: 3s;
+}
+
+.star-ani-5 {
+  animation: 10s linear kf-star-1 infinite;
+  animation-duration: 7s;
+  animation-delay: 4s;
+}
+
+.star-ani-6 {
+  animation: 10s linear kf-star-1 infinite;
+  animation-duration: 10s;
+  animation-delay: 5s;
+}
+
+.star-ani-7 {
+  animation: 10s linear kf-star-1 infinite;
+  animation-duration: 12s;
+  animation-delay: 6s;
+}
+
+@keyframes kf-star-1 {
+  0% {
+    scale: 0;
+    rotate: 0deg;
+    opacity: 1;
+  }
+
+  4% {
+    scale: 0.5;
+    rotate: 90deg;
+  }
+
+  8% {
+    scale: 0;
+    rotate: 180deg;
+  }
+
+  100% {
+    scale: 0;
+    rotate: 180deg;
+  }
+}
+
+.element {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: 50% 50%;
+}
+
+.meteorPink {
+  svg {
+    filter: drop-shadow(0 0 10px white);
+    width: 7em;
+    height: 7em;
+  }
+  opacity: 0;
+  rotate: -55deg;
+}
+
+.meteorWhite {
+  svg {
+    filter: drop-shadow(0 0 10px rgba(195, 79, 90, 0.65));
+    width: 8em;
+    height: 8em;
+  }
+  opacity: 0;
+  rotate: -55deg;
+}
+
+.star-size-1 {
+  svg {
+    width: 5.6em;
+    height: 5.6em;
+  }
+}
+
+.star {
+  svg {
+    filter: drop-shadow(0 0 10px rgba(195, 79, 90, 0.65));
+  }
+  opacity: 0;
+}
+
+.star-pos-1 {
+  translate: 30% 10%;
+}
+
+.star-pos-2 {
+  translate: 40% -30%;
+}
+
+.star-pos-3 {
+  translate: -10% 30%;
+}
+
+.star-pos-4 {
+  translate: 10% 40%;
+}
+
+.star-pos-5 {
+  translate: -30% 25%;
+}
+
+.star-pos-6 {
+  translate: -30% -10%;
+}
+
+.star-pos-7 {
+  translate: -20% -40%;
 }

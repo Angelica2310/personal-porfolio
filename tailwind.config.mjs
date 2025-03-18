@@ -45,7 +45,7 @@ export default {
         },
         bounce: {
           "0%, 100%": {
-            transform: "translateY(-25%)",
+            transform: "translateY(-10%)",
             animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)",
           },
           "50%": {
@@ -53,12 +53,20 @@ export default {
             animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
           },
         },
-        "fade-in": {
+        fadein: {
           "0%": {
             opacity: 0,
           },
           "100%": {
             opacity: 1,
+          },
+        },
+        fadeout: {
+          "0%": {
+            opacity: 1,
+          },
+          "100%": {
+            opacity: 0,
           },
         },
         wiggle: {
@@ -73,13 +81,23 @@ export default {
             transform: "rotate(-10deg)",
           },
         },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
       },
       animation: {
         fadeInUp: "fadeInUp 1s ease-in-out 0.25s 1",
         tada: "tada 1s ease-in-out 0.25s infinite",
-        bounce: "bounce 5s ease-in-out 0.25s infinite",
+        bounce: "bounce 5.5s ease-in-out infinite",
         fadein: "fade-in 1s ease-in-out forwards",
         wiggle: "wiggle 0.8s ease 0.25s infinite",
+        fadeout: "fade-out 1s ease-out 0.25s 1",
+        meteorEffect: "meteor 5s linear infinite",
       },
     },
   },
