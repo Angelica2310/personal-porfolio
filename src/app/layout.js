@@ -3,7 +3,6 @@ import "./globals.css";
 import NavBar from "../components/NavBar";
 import Footer from "@/components/Footer";
 import BackgroundBox from "@/components/BackgroundBox";
-// import Provider from "./provider";
 
 const charm = Charm({
   variable: "--font-charm",
@@ -16,9 +15,9 @@ const charm = Charm({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${charm.variable}`}>
+      <body className={`${charm.variable} flex flex-col min-h-screen`}>
         <NavBar />
-        {children}
+        <main className="flex-grow">{children}</main>
         <Footer />
         <BackgroundBox />
       </body>

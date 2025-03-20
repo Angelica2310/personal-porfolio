@@ -89,6 +89,17 @@ export default {
             opacity: "0",
           },
         },
+        glow: {
+          "0%": {
+            backgroundColor: "#fcfcfd",
+          },
+          "30%": {
+            backgroundColor: "#fff6cd",
+          },
+          "100%": {
+            backgroundColor: "#fcfcfd",
+          },
+        },
       },
       animation: {
         fadeInUp: "fadeInUp 1s ease-in-out 0.25s 1",
@@ -98,6 +109,7 @@ export default {
         wiggle: "wiggle 0.8s ease 0.25s infinite",
         fadeout: "fade-out 1s ease-out 0.25s 1",
         meteorEffect: "meteor 5s linear infinite",
+        glow: "glow 0.6s ease-in-out 0.25s 1",
       },
     },
   },
