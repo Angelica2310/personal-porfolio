@@ -15,6 +15,7 @@ import MenuPage from "./MenuDropDown";
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
+  const [isWide, setIsWide] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,15 +26,32 @@ export default function NavBar() {
       }
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("remove", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleWide = () => {
+      if (window.innerWidth > 768) {
+        setIsWide(true);
+      } else {
+        setIsWide(false);
+      }
+    };
+    handleWide();
+    window.addEventListener("resize", handleWide);
+    return () => window.removeEventListener("resize", handleWide);
   }, []);
 
   return (
     //  bg-[rgba(195,79,90,0.3)]
     <div
-      className={`grid grid-cols-2 items-center z-50 transition-all duration-300 top-0 fixed w-screen ${
-        scrolled ? "bg-[rgba(195,79,90,0.3)]" : ""
-      }`}
+      className={`grid grid-cols-2 z-10 items-center transition-all duration-300 top-0 fixed w-screen py-4 backdrop-blur-md ${
+        isWide
+          ? scrolled
+            ? "bg-[rgba(255,255,255,0.2)]"
+            : ""
+          : "bg-[--background]"
+      } `}
     >
       <div className="lg:pl-20 pl-5">
         <ActiveLink href="/">
@@ -43,7 +61,7 @@ export default function NavBar() {
             height={0}
             width={0}
             sizes="100%"
-            style={{ width: "100px", height: "auto" }}
+            style={{ width: "50px", height: "auto" }}
           />
         </ActiveLink>
       </div>
@@ -71,7 +89,7 @@ export default function NavBar() {
           <ActiveLink href="/project" variant="navBar">
             <div className="grid grid-cols-[auto,auto] gap-2 items-center">
               <FolderGit2 />
-              <p className="md:hidden lg:block ">Project</p>
+              <p className="md:hidden lg:block ">Projects</p>
             </div>
           </ActiveLink>
 

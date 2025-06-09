@@ -5,23 +5,19 @@ import React from "react";
 export default function Introduce() {
   return (
     <div>
-      <div className="grid md:grid-cols-[2fr_1fr] p-4 items-center pt-[30%] lg:pt-[10%]">
-        <div className="pl-10 lg:pl-40">
-          <p className="self-center text-4xl lg:text-5xl md:self-start font-serif mb-7">
+      <div className="grid md:grid-cols-[1fr_1fr] p-4 items-center pt-[30%] lg:pt-[10%] pl-10">
+        <div className="md:w-3/4 mx-auto">
+          <p className="text-4xl lg:text-5xl font-serif mb-7">
             Who <span className="text-[--grey]">Am I?</span>
           </p>
-          <div className="flex gap-5 lg:gap-8 flex-col text-xl md:text-2xl lg:text-3xl md:w-3/4 text-justify">
-            <p>
+          <div className="flex gap-5 lg:gap-8 flex-col text-xl md:text-2xl lg:text-3xl text-justify">
+            <p className="font-sans">
               Hi everyone, you can call me{" "}
               <span className="text-[--grey]">Angelica</span>. I'm living in{" "}
               <span className="text-[--grey]">the UK</span>, but origionally
               come from <span className="text-[--grey]">Viet Nam</span>.
             </p>
-            <p>
-              I am currently worked as a junior software developer at Tag Retail
-              Systems.
-            </p>
-            <p>
+            <p className="font-sans">
               My background is in business management, but I recently completed
               a Software Development Bootcamp. I have a strong enthusiasm for
               technology and have finally found the right path for my career.
