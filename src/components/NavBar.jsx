@@ -45,7 +45,7 @@ export default function NavBar() {
   return (
     //  bg-[rgba(195,79,90,0.3)]
     <div
-      className={`grid grid-cols-2 z-10 items-center transition-all duration-300 top-0 fixed w-screen py-4 backdrop-blur-md ${
+      className={`grid grid-cols-2 z-50 items-center transition-all duration-300 top-0 fixed w-full py-4 backdrop-blur-md ${
         isWide
           ? scrolled
             ? "bg-[rgba(255,255,255,0.2)]"
