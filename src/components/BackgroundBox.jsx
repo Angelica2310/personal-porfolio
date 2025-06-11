@@ -5,14 +5,17 @@ import { Star } from "./Star";
 export default function BackgroundBox() {
   return (
     <div
-      className="background-box"
       style={{
         position: "fixed",
         top: 0,
         left: 0,
-        width: "100%",
-        height: "100%",
-        zIndex: -1,
+        width: "100vw",
+        height: "100vh",
+        zIndex: 0, // not -1
+        backgroundImage: "url('/background.png')",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
       }}
     >
       <div className="element meteorPink meteorP-ani-1">
