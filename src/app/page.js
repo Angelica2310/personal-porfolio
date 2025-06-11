@@ -4,7 +4,7 @@ import Introduction from "@/components/Introduction";
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="min-h-screen border border-red-500">
       <Introduction />
       <Introduce />
       <ConnectMe />
