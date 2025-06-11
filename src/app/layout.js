@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         className={`${charm.variable} relative z-10 flex flex-col min-h-screen`}
       >
         <NavBar />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow z-10 relative">{children}</main>
         <Footer />
         <BackgroundBox />
       </body>

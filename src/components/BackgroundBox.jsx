@@ -11,7 +11,7 @@ export default function BackgroundBox() {
         left: 0,
         width: "100vw",
         height: "100vh",
-        zIndex: 0, // not -1
+        zIndex: 0,
         backgroundImage: "url('/background.png')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
