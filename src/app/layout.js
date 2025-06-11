@@ -15,7 +15,9 @@ const charm = Charm({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${charm.variable} flex flex-col min-h-screen`}>
+      <body
+        className={`${charm.variable} relative z-10 flex flex-col min-h-screen`}
+      >
         <NavBar />
         <main className="flex-grow">{children}</main>
         <Footer />
