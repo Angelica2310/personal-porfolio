@@ -11,11 +11,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { createPortal } from "react-dom";
 
 export default function MenuPage() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,12 +27,6 @@ export default function MenuPage() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
 
   return (
     <DropDownMenu.Root open={isDropdownOpen} onOpenChange={setIsDropdownOpen}>

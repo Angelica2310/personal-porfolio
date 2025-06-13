@@ -18,10 +18,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${charm.variable} relative z-10 flex flex-col min-h-screen`}
       >
+        <BackgroundBox />
         <NavBar />
         <main className="flex-grow z-10 relative">{children}</main>
-        <Footer />
-        <BackgroundBox />
+        <footer className="z-10 relative">
+          <Footer />
+        </footer>
       </body>
     </html>
   );

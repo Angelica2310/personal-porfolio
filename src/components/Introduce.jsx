@@ -16,14 +16,17 @@ export default function Introduce() {
           <p className="font-sans">
             I specialize in <span className="text-[--grey]">React</span>{" "}
             development, using
-            <span className="text-[--grey]"> Next.js/Vite</span> for efficient
-            and <span className="text-[--grey]">Tailwind CSS </span>
+            <span className="text-[--grey]"> Next.js</span> or{" "}
+            <span className="text-[--grey]">Vite</span> for efficient and{" "}
+            <span className="text-[--grey]">Tailwind CSS </span>
             for sleek, responsive designs.
           </p>
           <p className="font-sans">
             I also have experience working with{" "}
-            <span className="text-[--grey]">SQL databases</span>, ensuring
-            efficient data management
+            <span className="text-[--grey]">
+              Vue.js, Bootstrap, SQL databases, RESTful APIs
+            </span>
+            , and integrating front-end apps with back-end services built in C#.
           </p>
           <p className="font-sans">
             Always eager to learn, I love tackling new challenges and building
