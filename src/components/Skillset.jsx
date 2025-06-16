@@ -4,9 +4,12 @@ import React from "react";
 const tools = [
   { id: 1, src: "/github.png" },
   { id: 2, src: "/ios.png" },
-  { id: 3, src: "/supabase.png" },
-  { id: 4, src: "/vscode.png" },
-  { id: 5, src: "/jira.png" },
+  { id: 3, src: "/windows.png" },
+  { id: 4, src: "/supabase.png" },
+  { id: 5, src: "/vscode.png" },
+  { id: 6, src: "/vscodestudio.png" },
+  { id: 7, src: "/jira.png" },
+  { id: 8, src: "/trello.png" },
 ];
 
 const softSkills = [
@@ -48,7 +51,7 @@ export default function Skillset() {
       <p className="uppercase font-sans self-center text-2xl lg:text-4xl pb-5">
         Tools <span className="text-[--grey]">I use</span>
       </p>
-      <div className="gap-7 grid grid-cols-2 md:grid-cols-5 px-4 pb-20">
+      <div className="gap-7 grid grid-cols-2 md:grid-cols-4 px-4 pb-20">
         {tools.map((tool) => (
           <div key={tool.id} className="card">
             <div className="w-[25vw] md:w-[13vw] h-24 md:h-32 lg:h-40 flex justify-center items-center p-2 hover:scale-105 transition-transform duration-200">
