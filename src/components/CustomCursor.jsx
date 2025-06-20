@@ -38,7 +38,7 @@ export default function BubbleCursor() {
   }, []);
 
   return (
-    <>
+    <div className="bubble-cursor">
       {new Array(BUBBLE_COUNT).fill(0).map((_, i) => (
         <div
           key={i}
@@ -58,11 +58,15 @@ export default function BubbleCursor() {
           }}
         />
       ))}
-      <style jsx global>{`
-        * {
-          cursor: none;
-        }
-      `}</style>
-    </>
+      <style jsx global>
+        {`
+          @media (min-width: 769px) {
+            * {
+              cursor: none;
+            }
+          }
+        `}
+      </style>
+    </div>
   );
 }
