@@ -5,14 +5,14 @@ const BUBBLE_COUNT = 20;
 
 export default function BubbleCursor() {
   const bubblesRef = useRef([]);
-  const positions = useRef(
-    new Array(BUBBLE_COUNT).fill({
-      x: window.innerWidth / 2,
-      y: window.innerHeight / 2,
-    })
-  );
+  const positions = useRef([]);
 
   useEffect(() => {
+    positions.current = new Array(BUBBLE_COUNT).fill({
+      x: window.innerWidth / 2,
+      y: window.innerHeight / 2,
+    });
+
     const handleMouseMove = (e) => {
       positions.current.unshift({ x: e.clientX, y: e.clientY });
       positions.current = positions.current.slice(0, BUBBLE_COUNT);
