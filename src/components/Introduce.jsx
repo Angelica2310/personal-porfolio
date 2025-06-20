@@ -40,7 +40,6 @@ export default function Introduce() {
         alt="girl"
         width={200}
         height={200}
-        // sizes="100%"
         className="pl-10 w-[50vw] lg:w-[50vw] xl:w-[20vw] h-auto mt-7 place-self-center"
       />
     </div>

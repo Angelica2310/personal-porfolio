@@ -42,36 +42,6 @@ body {
   }
 } */
 
-/* CURSOR */
-
-body.defaultCursor {
-  cursor: default;
-}
-
-body.cursorPink {
-  cursor: url("/cursor.png"), auto;
-  -webkit-animation: cursorPink 400ms infinite;
-  animation: cursorPink 400ms infinite;
-}
-
-@-webkit-keyframes cursorPink {
-  0%,
-  100% {
-    cursor: url("/cursor.png"), auto;
-  }
-}
-
-@keyframes cursorPink {
-  0%,
-  100% {
-    cursor: url("/cursor.png"), auto;
-  }
-}
-
-canvas {
-  height: 70vh !important;
-}
-
 .connection-icon {
   border: 1px solid var(--pink);
   padding: 5px;

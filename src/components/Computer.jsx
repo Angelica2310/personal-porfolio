@@ -9,7 +9,7 @@ Title: Pink Computer
 "use client";
 import React from "react";
 import { useGLTF } from "@react-three/drei";
-import { Leva, useControls } from "leva";
+// import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 
 export default function Model(props) {

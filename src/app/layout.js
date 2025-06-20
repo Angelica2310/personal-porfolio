@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "../components/NavBar";
 import Footer from "@/components/Footer";
 import BackgroundBox from "@/components/BackgroundBox";
+import BubbleCursor from "@/components/CustomCursor";
 
 const charm = Charm({
   variable: "--font-charm",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
         <footer className="z-10 relative">
           <Footer />
         </footer>
+        <BubbleCursor />
       </body>
     </html>
   );

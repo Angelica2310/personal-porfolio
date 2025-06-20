@@ -18,28 +18,18 @@ export default function NavBar() {
   const [isWide, setIsWide] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleWide = () => setIsWide(window.innerWidth > 768);
 
-  useEffect(() => {
-    const handleWide = () => {
-      if (window.innerWidth > 768) {
-        setIsWide(true);
-      } else {
-        setIsWide(false);
-      }
-    };
     handleWide();
+
+    window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleWide);
-    return () => window.removeEventListener("resize", handleWide);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleWide);
+    };
   }, []);
 
   return (
