@@ -342,7 +342,7 @@ body {
 
 /* cursor */
 @media (max-width: 768px) {
-  .bubble-cursor {
+  #canvas {
     display: none;
   }
 }
