@@ -1,4 +1,5 @@
 import { Github, Linkedin, Instagram } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 Github;
 
@@ -10,12 +11,20 @@ export default function ConnectMe() {
         Feel free to <span className="text-[--grey]">connect</span> with me
       </p>
       <div className="flex gap-4">
-        <div className="connection-icon">
+        <Link
+          className="connection-icon"
+          href="https://github.com/Angelica2310?tab=repositories"
+          target="_blank"
+        >
           <Github />
-        </div>
-        <div className="connection-icon">
+        </Link>
+        <Link
+          className="connection-icon"
+          href="https://www.linkedin.com/in/giang-angelica-le-68188b195/"
+          target="_blank"
+        >
           <Linkedin />
-        </div>
+        </Link>
         <div className="connection-icon">
           <Instagram />
         </div>
