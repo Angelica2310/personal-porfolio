@@ -3,7 +3,7 @@ import "./globals.css";
 import NavBar from "../components/NavBar";
 import Footer from "@/components/Footer";
 import BackgroundBox from "@/components/BackgroundBox";
-import CanvasCursor from "@/components/cursor/CanvasCursor";
+import CanvasCursor from "@/components/animation/cursor/CanvasCursor";
 
 const charm = Charm({
   variable: "--font-charm",

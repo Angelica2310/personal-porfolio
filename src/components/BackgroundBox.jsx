@@ -1,6 +1,6 @@
-import { MeteorPink } from "./MeteorPink";
-import { MeteorWhite } from "./MeteorWhite";
-import { Star } from "./Star";
+import { MeteorPink } from "./animation/MeteorPink";
+import { MeteorWhite } from "./animation/MeteorWhite";
+import { Star } from "./animation/Star";
 
 export default function BackgroundBox() {
   return (

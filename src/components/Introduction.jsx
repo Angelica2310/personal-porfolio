@@ -1,4 +1,5 @@
 import GenerateModel from "./GenerateModel";
+import { TextShimmerWave } from "./animation/ShimmerText";
 
 export default function Introduction() {
   return (
@@ -16,9 +17,13 @@ export default function Introduction() {
         </div>
         <p className="pt-10 md:pt-8 xl:pt-20 lg:pt-16 text-xl md:text-3xl lg:text-4xl xl:text-5xl text-[--grey] type-jobroles break-words"></p>
       </div>
-
-      <div className="animate-bounce">
-        <GenerateModel />
+      <div className="flex flex-col items-center">
+        <div className="animate-bounce w-[50vw] h-[50vh]">
+          <GenerateModel />
+        </div>
+        <TextShimmerWave className="text-2xl md:text-4xl" duration={1}>
+          I'm 3D - spin me around!
+        </TextShimmerWave>
       </div>
     </div>
   );
