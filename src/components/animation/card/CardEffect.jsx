@@ -15,7 +15,7 @@ export function ThreeDCardDemo() {
       src: "/restaurant.png",
       title: "Restaurant website",
       description:
-        "The app, built with Next.js and styled using Tailwind CSS, features dynamic pages, real-time table booking, and live Google Reviews with Maps for easy access and credibility. It includes a dynamic menu, responsive design, EmailJS-powered contact forms, and smooth animations for a modern, user-friendly experience across all devices.",
+        "Independently learned and implemented a booking system with EmailJS integration, enhancing user interaction without a backend. Built using Next.js and Tailwind CSS, with embedded Google Maps and review features; deployed to Vercel.",
       github: "https://github.com/Angelica2310/restaurant-web",
       demo: "https://restaurant-web-self.vercel.app/",
     },
@@ -24,7 +24,7 @@ export function ThreeDCardDemo() {
       src: "/e-commerce.png",
       title: "E-commerce shopping",
       description:
-        "3Bay is an online marketplace where sellers create personalized storefronts, offering buyers an immersive shopping experience. Built with Next.js, Tailwind CSS, and Clerk for authentication, it uses Stripe for payments, Radix UI for components, React Redux for state management, and AWS S3 with API Gateway to handle media and RESTful requests.",
+        "Developed a full-stack e-commerce marketplace in a team of four over 1.5 weeks, featuring Stripe payments, Clerk authentication, and AWS image handling. Built with Next.js and PostgreSQL; collaborated on architecture and version control using GitHub Projects.",
       github: "https://github.com/Angelica2310/3bay-app",
       demo: "https://3bay-app.vercel.app/",
     },
@@ -33,7 +33,7 @@ export function ThreeDCardDemo() {
       src: "/ratingsystem.png",
       title: "Rating system",
       description:
-        "Built with Next.js, this app lets users view, vote, and comment on their favorite brands, with real-time updates and data fetched from a database. Users can sign in with GitHub or Gmail, create a profile, and manage their own comments. The app features dynamic metadata, responsive design, Radix-based forms, a 404 error page, and a user profile section with avatar and login details.",
+        "Applied bootcamp knowledge to build an interactive brand rating platform with a connected backend, then self-learned Chart.js to add real-time data visualisation. Integrated Clerk authentication and Radix-based forms to create a smooth and engaging user experience.",
       github: "https://github.com/Angelica2310/rating-system",
       demo: "https://rating-system-beta.vercel.app/",
     },
@@ -66,10 +66,10 @@ export function ThreeDCardDemo() {
     },
   ];
   return (
-    <div className="gap-7 grid grid-cols-1 lg:grid-cols-3 pb-15 md:w-[80vw]">
+    <div className="gap-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-15 md:w-[80vw]">
       {projects.map((project) => (
-        <CardContainer key={project.id} className="inter-var md:pb-20 pb-15">
-          <CardBody className="bg-white/10 backdrop-blur-md relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-white/5 dark:border-white/10 border-black/10 w-full max-w-[350px] md:max-w-[40vw] md:h-[70vh] h-[65vh] rounded-xl p-6 border font-serif flex flex-col items-center hover:cursor-pointer">
+        <CardContainer key={project.id} className="inter-var md:pb-20 pb-16">
+          <CardBody className="bg-white/10 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[90vw] md:w-full max-w-[350px] md:max-w-[40vw] lg:h-[65vh] md:h-[75vh] h-[90vh] rounded-xl p-6 border font-serif flex flex-col items-center hover:cursor-pointer">
             <CardItem translateZ={60}>
               <Image
                 src={project.src}

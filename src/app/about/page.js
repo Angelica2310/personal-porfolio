@@ -2,6 +2,11 @@ import Skillset from "@/components/Skillset";
 import Image from "next/image";
 import React from "react";
 
+export const metadata = {
+  title: "About Me",
+  description: "Find more information about myself and my skills",
+};
+
 export default function Introduce() {
   return (
     <div>

@@ -2,6 +2,11 @@ import React from "react";
 import Image from "next/image";
 import { ThreeDCardDemo } from "@/components/animation/card/CardEffect";
 
+export const metadata = {
+  title: "My Projects",
+  description: "Find more information about my projects",
+};
+
 export default function ProjectPage() {
   return (
     <div className="flex flex-col justify-center items-center pt-[30%] lg:pt-[10%]">

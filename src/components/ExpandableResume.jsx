@@ -67,7 +67,7 @@ export function ExpandableResume() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[450px] md:max-w-[550px] h-[60vh] md:h-fit md:max-h-[90%]  flex flex-col bg-[--background] rounded-3xl overflow-hidden"
+              className="w-[90vw] max-w-[450px] md:max-w-[550px] h-[60vh] md:h-fit md:max-h-[90%]  flex flex-col bg-[--background] rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <img
@@ -114,7 +114,7 @@ export function ExpandableResume() {
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col md:flex-row justify-between items-center rounded-xl cursor-pointer md:hover:bg-[--background]"
+            className="p-4 flex flex-col md:flex-row justify-between items-center rounded-xl cursor-pointer md:hover:bg-white/70 hover:-translate-y-[4px] hover:transition-transform"
           >
             <div className="flex gap-4 flex-col md:flex-row items-center">
               <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -226,7 +226,7 @@ const cards = [
       return (
         <div>
           <p>• Coding personal projects</p>
-          <p>• Learning via YouTube/Udemy</p>
+          <p>• Self-taught via YouTube/Udemy</p>
           <Link
             href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2YvYy84YmJlZDJmODMxZWIzYmE4L0VrUmRONzFlbFk5UGhDc2hxZGMtLTVzQllxa3U5enp4ZGhTVm5jU3JsMkh6Unc%5FZT1lTVRqS24&id=8BBED2F831EB3BA8%21sbd375d44955e4f8f842b21a9d73efb9b&cid=8BBED2F831EB3BA8"
             target="_blank"

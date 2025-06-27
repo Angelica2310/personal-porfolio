@@ -19,27 +19,24 @@ export function TimelineDemo() {
           </div>
           <div className="mb-8 leading-8">
             <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
-              • Built projects using Vue.js and Bootstrap as part of a group
-              collaboration
+              • Contributed to a production-ready Vue.js application within a
+              small agile team, collaborating closely through daily standups and
+              Jira task boards.
             </div>
             <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
-              • Developed a real-life application with a C# backend and RESTful
-              API
+              • Collaborated with a backend engineer working in C# to integrate
+              RESTful APIs, implementing secure user login and displaying
+              hardware data on the frontend, which deepened my full-stack
+              development knowledge.
             </div>
             <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
-              • Implemented user login functionality and fetched hardware and
-              user data from a custom API
+              • Applied Git best practices for version control and collaboration
+              (feature branches, pull requests, merging).
             </div>
             <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
-              • Collaborated using Jira to create, manage, and update
-              development tickets
-            </div>
-            <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
-              • Used GitHub for version control, including pushing code and
-              merging branches
-            </div>
-            <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
-              • Ran and tested the application using Visual Studio
+              • Gained confidence working in a real-world development cycle,
+              adapting quickly to new tools like Visual Studio and Bootstrap
+              while consistently meeting sprint goals.
             </div>
           </div>
         </div>
@@ -60,19 +57,14 @@ export function TimelineDemo() {
           <div className="mb-8 leading-8">
             <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
               • Delivered first-line IT support, troubleshooting technical
-              issues efficiently
+              issues across hardware and networks, often under time pressure
             </div>
             <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
-              • Handled support requests via phone, email, and in-person,
-              prioritising tasks effectively
+              • Collaborated with engineers to ensure smooth operations
             </div>
             <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
-              • Logged and documented service requests with strong attention to
-              detail
-            </div>
-            <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
-              • Monitored toner alerts and helpdesk emails using Netaphor;
-              assigned service calls to engineers
+              • Learned new tools (Netaphor, ticketing systems) on the job,
+              showing fast adaptability
             </div>
           </div>
         </div>
@@ -84,7 +76,7 @@ export function TimelineDemo() {
         <div>
           <div className="text-base font-normal text-[--grey] md:text-xl flex gap-2">
             <MapPinCheckInside />
-            <p>Regus, IWG Group</p>
+            <p>REGUS, IWG GROUP</p>
           </div>
           <div className="mb-8 text-base font-extrabold text-[--grey] md:text-xl flex gap-2">
             <Captions />
@@ -92,19 +84,16 @@ export function TimelineDemo() {
           </div>
           <div className="mb-8 leading-8">
             <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
-              • Set up and maintained hardware and software (PCs, laptops,
-              printers, mobile devices)
+              • Maintained site-wide IT equipment (PCs, printers, devices),
+              resolving software/hardware issues
             </div>
             <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
-              • Delivered IT support to ensure smooth operation of systems and
-              networks
+              • Partnered with central IT to implement process improvements that
+              reduced technical downtime
             </div>
             <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
-              • Worked with IT team to resolve issues and implement improvements
-            </div>
-            <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
-              • Acted as first-line support, resolving basic issues before
-              escalation
+              • Demonstrated ownership, multitasking, and technical
+              troubleshooting across a multi- client workspace.
             </div>
           </div>
         </div>

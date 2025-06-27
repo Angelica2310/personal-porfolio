@@ -1,6 +1,8 @@
 "use client";
 import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import ProfileCard from "./profilecard/ProfileCard";
+import { TextShimmerWave } from "./ShimmerText";
 
 export const Timeline = ({ data }) => {
   const ref = useRef(null);
@@ -23,21 +25,50 @@ export const Timeline = ({ data }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className="w-full font-sans md:px-10" ref={containerRef}>
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-2xl mt-[10%] max-w-4xl">
-          I'm a passionate and motivated junior developer with practical
-          experience in building responsive, user-focused web applications.
-          Comfortable with HTML, CSS, JavaScript, and eager to grow PHP and
-          WordPress skills in a commercial environment. Recently contributed to
-          production-level applications and have a strong appreciation for clean
-          code, collaborative workflows, and client-driven results.
-        </h2>
-        <p className="text-[--grey] text-xl md:text-2xl max-w-sm pt-10">
-          Here&apos;s a timeline of my journey.
-        </p>
+    <div className="w-full md:px-10" ref={containerRef}>
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-10 text-justify flex flex-col justify-center items-center">
+        <div className="flex flex-col md:flex-row gap-16 mt-[10%] items-center">
+          <ProfileCard
+            name="Giang Le"
+            title="Junior Software Developer"
+            handle="giangle"
+            status="Online"
+            contactText="My LinkedIn"
+            avatarUrl="/giang.png"
+            showUserInfo={true}
+            enableTilt={true}
+            onContactClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/giang-angelica-le/",
+                "_blank"
+              )
+            }
+          />
+          <div className="font-sans">
+            <h2 className="text-lg md:text-2xl max-w-4xl">
+              I’m a passionate and curious developer who loves building things
+              with code.
+            </h2>
+            <h2 className="text-lg md:text-2xl max-w-4xl mt-3">
+              I’ve completed the TechEducators Bootcamp and hold CompTIA A+
+              certifications.
+            </h2>
+            <h2 className="text-lg md:text-2xl max-w-4xl mt-3">
+              I’ve worked with JavaScript, React, Next.js, Vue, and styled
+              projects using Tailwind and Bootstrap. I’m comfortable with SQL,
+              REST APIs, and connecting front-ends to back-ends with C#.
+            </h2>
+            <h2 className="text-lg md:text-2xl max-w-4xl mt-3">
+              I’m always up for learning something new and excited to grow as a
+              developer while working on real-world projects.
+            </h2>
+          </div>
+        </div>
+        <TextShimmerWave className="text-2xl md:text-4xl mt-[10%]" duration={1}>
+          Here&apos;s a timeline of my journey ...
+        </TextShimmerWave>
       </div>
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+      <div ref={ref} className="relative max-w-7xl mx-auto pb-20 font-sans">
         {data.map((item, index) => (
           <div
             key={index}
