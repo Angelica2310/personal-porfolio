@@ -27,7 +27,7 @@ export const Timeline = ({ data }) => {
   return (
     <div className="w-full md:px-10" ref={containerRef}>
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-10 text-justify flex flex-col justify-center items-center">
-        <div className="flex flex-col md:flex-row gap-16 mt-[10%] items-center">
+        <div className="flex flex-col md:flex-row gap-16 mt-[30%] md:mt-[10%] items-center">
           <ProfileCard
             name="Giang Le"
             title="Junior Software Developer"
