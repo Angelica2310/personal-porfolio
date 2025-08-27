@@ -66,6 +66,6 @@ jobs:
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: azure-linux-porfolio
+          app-name: azure-linux-porfolio-e8bndgd6f5a9e6dz
           slot-name: Production
           package: deploy.zip
