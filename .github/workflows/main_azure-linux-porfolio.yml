@@ -2,8 +2,7 @@ name: Build and deploy Node.js app to Azure Web App - azure-linux-porfolio
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -13,23 +12,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Node.js version
+      # Optional but nice: verify the app builds locally too
+      - name: Use Node 20
         uses: actions/setup-node@v3
         with:
           node-version: "20.x"
+          cache: "npm"
 
-      - name: Install and Build
+      - name: Install and build (local check only)
         run: |
-          npm install
-          npm run build --if-present
+          npm ci
+          npm run build
 
-      - name: Create deployment package
-        run: |
-          zip -r deploy.zip .next package.json node_modules public next.config.mjs
-
-      - name: Deploy to Azure Web App
+      # Deploy the repo (not a zip) and ask Azure to build with Oryx
+      - name: Deploy to Azure Web App (Oryx build on server)
         uses: azure/webapps-deploy@v3
         with:
-          app-name: "azure-linux-porfolio"
+          app-name: azure-linux-porfolio
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: ./deploy.zip
+          package: .
+          enable-oryx-build: true # 👈 important
