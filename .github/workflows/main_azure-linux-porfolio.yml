@@ -8,27 +8,26 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
-      # Optional but nice: verify the app builds locally too
+      # Optional local check; OK to keep or remove
       - name: Use Node 20
         uses: actions/setup-node@v3
         with:
           node-version: "20.x"
           cache: "npm"
 
-      - name: Install and build (local check only)
+      - name: Install and build (local verification)
         run: |
           npm ci
           npm run build
 
-      # Deploy the repo (not a zip) and ask Azure to build with Oryx
-      - name: Deploy to Azure Web App (Oryx build on server)
+      - name: Deploy to Azure Web App (let Oryx build on server)
         uses: azure/webapps-deploy@v3
         with:
           app-name: azure-linux-porfolio
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: .
-          enable-oryx-build: true # 👈 important
+          package: . # deploy the repo folder
+          clean: true # helps avoid conflicts
+          restart: true
