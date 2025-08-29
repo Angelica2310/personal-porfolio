@@ -6,37 +6,46 @@ import { ExpandableResume } from "./ExpandableResume";
 export function TimelineDemo() {
   const data = [
     {
-      title: "Mar 2025",
+      title: "Sep 2024 - Mar 2025",
       content: (
         <div>
           <div className="text-base font-normal text-[--grey] md:text-xl flex gap-2">
             <MapPinCheckInside />
-            <p>TAG RETAIL SYSTEMS</p>
+            <p>TECH EDUCATORS & TAG RETAIL SYSTEMS</p>
           </div>
           <div className="mb-8 text-base font-extrabold text-[--grey] md:text-xl flex gap-2">
             <Captions />
-            Junior Software Developer
+            From Student to Junior Developer
           </div>
           <div className="mb-8 leading-8">
-            <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
-              • Contributed to a production-ready Vue.js application within a
-              small agile team, collaborating closely through daily standups and
-              Jira task boards.
+            <div className="text-base text-[--grey] md:text-xl">
+              •{" "}
+              <span className="font-bold">
+                Software Development Bootcamp Student
+              </span>{" "}
+              – Delivered multiple real-world projects (React, Next.js, Node.js,
+              SQL), applying agile workflows, Git version control, and REST API
+              design. Learned to manage features end-to-end, from requirements
+              to testing.
             </div>
-            <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
-              • Collaborated with a backend engineer working in C# to integrate
-              RESTful APIs, implementing secure user login and displaying
-              hardware data on the frontend, which deepened my full-stack
-              development knowledge.
+            <div className="text-base text-[--grey] md:text-xl">
+              •{" "}
+              <span className="font-bold">
+                Teaching Assistant / Location Lead
+              </span>{" "}
+              – Mentored junior developers in JavaScript, React, and API
+              integration. Supported troubleshooting and code reviews,
+              developing strong problem-solving and communication skills.
             </div>
-            <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
-              • Applied Git best practices for version control and collaboration
-              (feature branches, pull requests, merging).
-            </div>
-            <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
-              • Gained confidence working in a real-world development cycle,
-              adapting quickly to new tools like Visual Studio and Bootstrap
-              while consistently meeting sprint goals.
+            <div className="text-base text-[--grey] md:text-xl">
+              •{" "}
+              <span className="font-bold">
+                Junior Software Developer (TAG Retail Systems)
+              </span>{" "}
+              – Built features for a production- ready Vue.js application within
+              a small agile team. Integrated REST APIs with a C# backend
+              engineer, wrote and tested reusable components, and debugged
+              cross-system issues to ensure reliability.
             </div>
           </div>
         </div>

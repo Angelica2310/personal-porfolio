@@ -1,5 +1,6 @@
 import GenerateModel from "./GenerateModel";
 import { TextShimmerWave } from "./animation/ShimmerText";
+import { BadgeEffect } from "./animation/card/BadgeEffect";
 
 export default function Introduction() {
   return (
@@ -10,10 +11,13 @@ export default function Introduction() {
             <p>Hi There! </p>
             <p className="animate-wiggle"> 👋🏻 </p>
           </div>
-          <p>
-            My name is{" "}
-            <span className="text-[--grey]">Giang (Angelica) Le</span>
-          </p>
+          <div className="flex gap-1 items-center">
+            <p>
+              My name is{" "}
+              <span className="text-[--grey]">Giang (Angelica) Le</span>
+            </p>
+            <BadgeEffect />
+          </div>
         </div>
         <p className="pt-10 md:pt-8 xl:pt-20 lg:pt-16 text-xl md:text-3xl lg:text-4xl xl:text-5xl text-[--grey] type-jobroles break-words"></p>
       </div>

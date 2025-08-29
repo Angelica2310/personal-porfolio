@@ -50,8 +50,8 @@ export const Timeline = ({ data }) => {
               with code.
             </h2>
             <h2 className="text-lg md:text-2xl max-w-4xl mt-3">
-              I’ve completed the TechEducators Bootcamp and hold CompTIA A+
-              certifications.
+              I’ve completed the Software Development Bootcamp and hold
+              Microsoft Azure Fundamentals (AZ-900) certification
             </h2>
             <h2 className="text-lg md:text-2xl max-w-4xl mt-3">
               I’ve worked with JavaScript, React, Next.js, Vue, and styled

@@ -101,8 +101,8 @@ export default {
           },
         },
         shine: {
-          "0%": { "background-position": "100%" },
-          "100%": { "background-position": "-100%" },
+          "0%": { transform: "translateX(-150%) rotate(12deg)" },
+          "100%": { transform: "translateX(300%) rotate(12deg)" },
         },
       },
       animation: {
@@ -114,7 +114,7 @@ export default {
         fadeout: "fade-out 1s ease-out 0.25s 1",
         meteorEffect: "meteor 5s linear infinite",
         glow: "glow 0.6s ease-in-out 0.25s 1",
-        shine: "shine 5s linear infinite",
+        shine: "shine 2s linear infinite",
       },
     },
   },

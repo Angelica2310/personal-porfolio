@@ -2,10 +2,10 @@
 
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { useOutsideClick } from "./UseOutsideClick";
+import { useOutsideClick } from "@/components/UseOutsideClick";
 import Link from "next/link";
 
-export function ExpandableResume() {
+export function BadgeEffect() {
   const [active, setActive] = useState(null);
   const ref = useRef(null);
   const id = useId();
@@ -30,7 +30,7 @@ export function ExpandableResume() {
   useOutsideClick(ref, () => setActive(null));
 
   return (
-    <div className="pb-10">
+    <div className="">
       <AnimatePresence>
         {active && typeof active === "object" && (
           <motion.div
@@ -80,16 +80,7 @@ export function ExpandableResume() {
               </motion.div>
 
               <div>
-                <div className="flex justify-between items-start p-4">
-                  <div className="">
-                    <motion.h3
-                      layoutId={`title-${active.title}-${id}`}
-                      className="font-bold text-[--grey] md:text-4xl text-2xl"
-                    >
-                      {active.title}
-                    </motion.h3>
-                  </div>
-                </div>
+                <div className="flex justify-between items-start p-4"></div>
                 <div className="pt-4 relative px-4">
                   <motion.div
                     layout
@@ -108,32 +99,39 @@ export function ExpandableResume() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-4xl mx-auto w-full gap-7 flex flex-col md:flex-row">
+      <ul className="max-w-4xl mx-auto w-full flex flex-col md:flex-row">
         {cards.map((card, index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col md:flex-row justify-between items-center rounded-xl cursor-pointer md:hover:bg-white/70 hover:-translate-y-[4px] hover:transition-transform"
+            whileHover={{ y: -4 }}
+            className="group relative p-2 flex flex-col md:flex-row justify-between items-center rounded-xl cursor-pointer transform "
           >
             <div className="flex gap-4 flex-col md:flex-row items-center">
               <motion.div layoutId={`image-${card.title}-${id}`}>
-                <img
-                  width={100}
-                  height={100}
-                  src={card.src}
-                  alt={card.title}
-                  className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top"
-                />
+                {/* metallic border wrapper */}
+                <div className="relative p-[3px] rounded-full bg-gradient-to-r from-gray-300 via-gray-100 to-gray-400 shadow-md overflow-hidden">
+                  {/* shine sweep overlay */}
+                  <span
+                    className="pointer-events-none absolute top-0 left-[-150%] h-full w-[60%]
+                     bg-gradient-to-r from-transparent via-white/80 to-transparent
+                     blur-sm opacity-90 rotate-12
+                     transition-transform duration-700 ease-out
+                     group-hover:translate-x-[300%] animate-shine"
+                  />
+                  {/* inner card */}
+                  <div className="relative bg-white rounded-full p-2 flex justify-center items-center">
+                    <img
+                      width={100}
+                      height={100}
+                      src={card.src}
+                      alt={card.title}
+                      className="h-[2rem] w-auto md:h-[4rem] rounded-full object-cover object-top"
+                    />
+                  </div>
+                </div>
               </motion.div>
-              <div className="">
-                <motion.h3
-                  layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-[--grey] text-center md:text-left text-2xl"
-                >
-                  {card.title}
-                </motion.h3>
-              </div>
             </div>
           </motion.div>
         ))}
@@ -177,64 +175,17 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    title: "Education",
-    src: "https://cdn.pixabay.com/photo/2017/09/24/19/17/pencils-2782840_1280.jpg",
+    title: "Badge",
+    src: "https://images.credly.com/size/680x680/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png",
     content: () => {
       return (
         <div>
-          <p>• Microsoft Certified: Azure Fundamentals (AZ-900) (08/2025)</p>
-          <p>• Software Development Bootcamp – TechEducators (12/2024)</p>
-          <p>• CompTIA A+ (Core 1 & 2), IT Fundamentals (2020)</p>
-          <p>• MBA – London School of Commerce (2014)</p>
-          <p>• BA in Business & Management – St Mary’s University (06/2013)</p>
-        </div>
-      );
-    },
-  },
-  {
-    title: "Skills",
-    src: "https://img.freepik.com/free-psd/3d-rendering-team-work_23-2151911561.jpg",
-    content: () => {
-      return (
-        <div>
-          <p>• Languages: JavaScript, HTML, CSS</p>
-          <p>• Frameworks/Libraries: ReactJS, Next.js, Vue.js</p>
-          <p>• Backend: Node.js, Express, SQL</p>
-          <p>• Styling: Tailwind CSS, Bootstrap</p>
-          <p>• Tools: Git, GitHub, Jira, Visual Studio, Postman</p>
-          <p>• APIs: RESTful APIs</p>
-          <p>• Databases: PostgreSQL, Supabase</p>
-        </div>
-      );
-    },
-  },
-  {
-    title: "Languages",
-    src: "https://cdn.pixabay.com/photo/2012/11/06/04/00/board-64269_1280.jpg",
-    content: () => {
-      return (
-        <div>
-          <p>• English: Fluent</p>
-          <p>• Vietnamese: Native</p>
-        </div>
-      );
-    },
-  },
-  {
-    title: "Hobbies",
-    src: "https://cdn.pixabay.com/photo/2018/08/04/18/08/origami-3584204_1280.jpg",
-    content: () => {
-      return (
-        <div>
-          <p>• Coding personal projects</p>
-          <p>• Self-taught via YouTube/Udemy</p>
+          <p>Microsoft Certified: Azure Fundamentals (AZ-900)</p>
           <Link
-            href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2YvYy84YmJlZDJmODMxZWIzYmE4L0VrUmRONzFlbFk5UGhDc2hxZGMtLTVzQllxa3U5enp4ZGhTVm5jU3JsMkh6Unc%5FZT1lTVRqS24&id=8BBED2F831EB3BA8%21sbd375d44955e4f8f842b21a9d73efb9b&cid=8BBED2F831EB3BA8"
+            href="https://learn.microsoft.com/api/credentials/share/en-us/GiangLe-6769/D121C8960831F00E?sharingId=8289F237B07CA743"
             target="_blank"
           >
-            •{" "}
-            <span className="hover:text-[--pink]">Canva design projects </span>{" "}
-            👈🏻 <small>click me!</small>
+            <span className="hover:text-[--pink]">Verify Credential </span> 👈🏻
           </Link>
         </div>
       );
