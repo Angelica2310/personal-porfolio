@@ -26,8 +26,11 @@ export default function Introduction() {
           <GenerateModel />
         </div>
         <TextShimmerWave className="text-2xl md:text-4xl" duration={1}>
-          I'm 3D - spin me around!
+          3D Interactive Object
         </TextShimmerWave>
+        <p className="font-sans text-[--grey]">
+          "Build with ThreeJS - try spinning me around!"
+        </p>
       </div>
     </div>
   );
