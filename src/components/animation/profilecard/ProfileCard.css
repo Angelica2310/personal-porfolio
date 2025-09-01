@@ -13,12 +13,12 @@
   --icon: none;
   --behind-gradient: none;
   --inner-gradient: none;
-  --sunpillar-1: #f7ede3; /* soft background */
-  --sunpillar-2: #c34f5a; /* your pink */
-  --sunpillar-3: #36454f; /* your grey */
-  --sunpillar-4: #f7ede3;
-  --sunpillar-5: #c34f5a;
-  --sunpillar-6: #36454f;
+  --sunpillar-1: hsl(2, 100%, 73%);
+  --sunpillar-2: hsl(53, 100%, 69%);
+  --sunpillar-3: hsl(93, 100%, 69%);
+  --sunpillar-4: hsl(176, 100%, 76%);
+  --sunpillar-5: hsl(228, 100%, 74%);
+  --sunpillar-6: hsl(283, 100%, 73%);
   --sunpillar-clr-1: var(--sunpillar-1);
   --sunpillar-clr-2: var(--sunpillar-2);
   --sunpillar-clr-3: var(--sunpillar-3);
@@ -77,28 +77,19 @@
   background-position: 0 0, 0 0, 50% 50%, 0 0;
   background-image: radial-gradient(
       farthest-side circle at var(--pointer-x) var(--pointer-y),
-      rgba(195, 79, 90, var(--card-opacity)) 4%,
-      /* pink center glow */
-        rgba(243, 209, 200, calc(var(--card-opacity) * 0.75)) 10%,
-      /* warm blush */ rgba(243, 209, 200, calc(var(--card-opacity) * 0.5)) 50%,
-      /* fade out */ rgba(247, 237, 227, 0) 100% /* transparent edges */
+      hsla(266, 100%, 90%, var(--card-opacity)) 4%,
+      hsla(266, 50%, 80%, calc(var(--card-opacity) * 0.75)) 10%,
+      hsla(266, 25%, 70%, calc(var(--card-opacity) * 0.5)) 50%,
+      hsla(266, 0%, 60%, 0) 100%
     ),
-    radial-gradient(
-      35% 52% at 55% 20%,
-      rgba(195, 79, 90, 0.7) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      100% 100% at 50% 50%,
-      rgba(54, 69, 79, 0.8) 1%,
-      transparent 76%
-    ),
+    radial-gradient(35% 52% at 55% 20%, #00ffaac4 0%, #073aff00 100%),
+    radial-gradient(100% 100% at 50% 50%, #00c1ffff 1%, #073aff00 76%),
     conic-gradient(
       from 124deg at 50% 50%,
-      #c34f5a 0%,
-      #36454f 40%,
-      #36454f 60%,
-      #c34f5a 100%
+      #c137ffff 0%,
+      #07c6ffff 40%,
+      #07c6ffff 60%,
+      #c137ffff 100%
     );
   overflow: hidden;
 }
@@ -122,7 +113,7 @@
   inset: 1px;
   position: absolute;
   background-image: var(--inner-gradient);
-  background-color: rgba(195, 79, 90, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
   transform: translate3d(0, 0, 0.01px);
 }
 
@@ -134,26 +125,9 @@
   mask-position: top calc(200% - (var(--background-y) * 5)) left
     calc(100% - var(--background-x));
   transition: filter 0.6s ease;
-  filter: brightness(0.85) contrast(1.1) saturate(0.8) opacity(0.4);
+  filter: brightness(0.66) contrast(1.33) saturate(0.33) opacity(0.5);
   animation: holo-bg 18s linear infinite;
-  mix-blend-mode: soft-light;
-  background-image: repeating-linear-gradient(
-      0deg,
-      #c34f5a 0%,
-      #f7ede3 10%,
-      #36454f 20%,
-      #c34f5a 30%
-    ),
-    radial-gradient(
-      farthest-corner at var(--pointer-x) var(--pointer-y),
-      rgba(243, 209, 200, 0.1) 12%,
-      rgba(195, 79, 90, 0.15) 20%,
-      rgba(195, 79, 90, 0.25) 120%
-    );
-  background-position: 0 var(--background-y),
-    var(--background-x) var(--background-y);
-  background-size: 400% 400%, 200% 200%;
-  background-repeat: repeat;
+  mix-blend-mode: color-dodge;
 }
 
 .pc-shine,
@@ -166,38 +140,35 @@
   background: transparent;
   background-size: cover;
   background-position: center;
-
   background-image: repeating-linear-gradient(
       0deg,
-      #c34f5a calc(var(--space) * 1),
-      #f7ede3 calc(var(--space) * 2),
-      #36454f calc(var(--space) * 3),
-      #c34f5a calc(var(--space) * 4),
-      #f7ede3 calc(var(--space) * 5),
-      #36454f calc(var(--space) * 6),
-      #c34f5a calc(var(--space) * 7)
+      var(--sunpillar-clr-1) calc(var(--space) * 1),
+      var(--sunpillar-clr-2) calc(var(--space) * 2),
+      var(--sunpillar-clr-3) calc(var(--space) * 3),
+      var(--sunpillar-clr-4) calc(var(--space) * 4),
+      var(--sunpillar-clr-5) calc(var(--space) * 5),
+      var(--sunpillar-clr-6) calc(var(--space) * 6),
+      var(--sunpillar-clr-1) calc(var(--space) * 7)
     ),
     repeating-linear-gradient(
       var(--angle),
-      #f7ede3 0%,
-      #c34f5a 3.8%,
-      #f7ede3 4.5%,
-      #c34f5a 5.2%,
-      #f7ede3 10%,
-      #f7ede3 12%
+      #0e152e 0%,
+      hsl(180, 10%, 60%) 3.8%,
+      hsl(180, 29%, 66%) 4.5%,
+      hsl(180, 10%, 60%) 5.2%,
+      #0e152e 10%,
+      #0e152e 12%
     ),
     radial-gradient(
       farthest-corner circle at var(--pointer-x) var(--pointer-y),
-      rgba(195, 79, 90, 0.1) 12%,
-      rgba(54, 69, 79, 0.15) 20%,
-      rgba(54, 69, 79, 0.25) 120%
+      hsla(0, 0%, 0%, 0.1) 12%,
+      hsla(0, 0%, 0%, 0.15) 20%,
+      hsla(0, 0%, 0%, 0.25) 120%
     );
-
   background-position: 0 var(--background-y),
     var(--background-x) var(--background-y), center;
-
-  background-blend-mode: overlay, soft-light, normal;
-  background-size: 400% 400%, 300% 300%, 200% 200%;
+  background-blend-mode: color, hard-light;
+  background-size: 500% 500%, 300% 300%, 200% 200%;
   background-repeat: repeat;
 }
 

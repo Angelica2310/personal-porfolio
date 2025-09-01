@@ -15,19 +15,9 @@ export function TimelineDemo() {
           </div>
           <div className="mb-8 text-base font-extrabold text-[--grey] md:text-xl flex gap-2">
             <Captions />
-            From Student to Junior Developer
+            Junior Developer
           </div>
           <div className="mb-8 leading-8">
-            <div className="text-base text-[--grey] md:text-xl">
-              •{" "}
-              <span className="font-bold">
-                Software Development Bootcamp Student
-              </span>{" "}
-              – Delivered multiple real-world projects (React, Next.js, Node.js,
-              SQL), applying agile workflows, Git version control, and REST API
-              design. Learned to manage features end-to-end, from requirements
-              to testing.
-            </div>
             <div className="text-base text-[--grey] md:text-xl">
               •{" "}
               <span className="font-bold">

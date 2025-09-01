@@ -42,10 +42,10 @@ export default function Introduce() {
         <Image
           src="/computer-girl.png"
           alt="girl"
-          width={400}
-          height={400}
+          width={300}
+          height={300}
           // sizes="100%"
-          className="pl-10 w-[90vw] xl:w-[40vw] h-auto mt-7 place-self-center"
+          className="pl-10 w-[90vw] xl:w-[30vw] h-auto place-self-center pb-5"
         />
       </div>
       <Skillset />

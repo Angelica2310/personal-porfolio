@@ -1,6 +1,6 @@
 import GenerateModel from "./GenerateModel";
 import { TextShimmerWave } from "./animation/ShimmerText";
-import { BadgeEffect } from "./animation/card/BadgeEffect";
+import { BadgeEffect } from "./animation/BadgeEffect";
 
 export default function Introduction() {
   return (
@@ -22,7 +22,7 @@ export default function Introduction() {
         <p className="pt-10 md:pt-8 xl:pt-20 lg:pt-16 text-xl md:text-3xl lg:text-4xl xl:text-5xl text-[--grey] type-jobroles break-words"></p>
       </div>
       <div className="flex flex-col items-center">
-        <div className="animate-bounce w-[50vw] h-[50vh]">
+        <div className="animate-fadeInUp w-[50vw] h-[50vh]">
           <GenerateModel />
         </div>
         <TextShimmerWave className="text-2xl md:text-4xl" duration={1}>

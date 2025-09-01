@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  media: false, // disable dark mode entirely
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -45,7 +46,7 @@ export default {
         },
         bounce: {
           "0%, 100%": {
-            transform: "translateY(-10%)",
+            transform: "translateY(-5%)",
             animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)",
           },
           "50%": {
@@ -104,17 +105,34 @@ export default {
           "0%": { transform: "translateX(-150%) rotate(12deg)" },
           "100%": { transform: "translateX(300%) rotate(12deg)" },
         },
+        zoomin: {
+          "0%": {
+            opacity: "0",
+            transform: "scale3d(0.3, 0.3, 0.3)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale3d(1, 1, 1)",
+          },
+        },
+        "fadein-bounce": {
+          "0%": { opacity: "0", transform: "scale(0.95) translateY(0)" },
+          "50%": { opacity: "1", transform: "scale(1) translateY(-10%)" },
+          "100%": { opacity: "1", transform: "scale(1) translateY(0)" },
+        },
       },
       animation: {
-        fadeInUp: "fadeInUp 1s ease-in-out 0.25s 1",
+        fadeInUp: "fadeInUp 3s ease-in-out 0.25s 1 backwards",
         tada: "tada 1s ease-in-out 0.25s infinite",
-        bounce: "bounce 5.5s ease-in-out infinite",
-        fadein: "fade-in 1s ease-in-out forwards",
+        bounce: "bounce 2.5s ease-in-out infinite",
+        fadein: "fade-in 0.15s linear",
         wiggle: "wiggle 0.8s ease 0.25s infinite",
         fadeout: "fade-out 1s ease-out 0.25s 1",
         meteorEffect: "meteor 5s linear infinite",
         glow: "glow 0.6s ease-in-out 0.25s 1",
         shine: "shine 2s linear infinite",
+        zoomin: "zoomin 0.6s ease-out forwards",
+        fadeinbounce: "fadein-bounce 4s ease-out forwards",
       },
     },
   },

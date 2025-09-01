@@ -94,7 +94,11 @@ export default function NavBar() {
             href="https://github.com/Angelica2310?tab=repositories"
             target="_blank"
           >
-            <div className="md:hidden lg:grid lg:grid-cols-[auto,auto] gap-2 items-center border border-[--pink] bg-[rgba(195,79,90,0.5)] hover:bg-[rgba(195,79,90,0.8)] cursor-pointer text-white p-2 w-fit rounded-md hover:-translate-y-[2px] hover:transition-transform">
+            {/* rgb(37, 99, 235) */}
+            <div
+              className="md:hidden lg:grid lg:grid-cols-[auto,auto] gap-2 items-center border border-[--green] bg-green-800/50 hover:bg-green-800/80
+cursor-pointer text-white p-2 w-fit rounded-md hover:-translate-y-[2px] hover:transition-transform"
+            >
               <FolderOpenDot />
               <Star />
             </div>

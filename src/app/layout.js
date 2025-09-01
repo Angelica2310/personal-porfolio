@@ -3,7 +3,7 @@ import "./globals.css";
 import NavBar from "../components/NavBar";
 import Footer from "@/components/Footer";
 import BackgroundBox from "@/components/BackgroundBox";
-import CanvasCursor from "@/components/animation/cursor/CanvasCursor";
+import SmoothFollower from "@/components/animation/cursor/CanvasCursor";
 
 const charm = Charm({
   variable: "--font-charm",
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         <footer className="z-10 relative">
           <Footer />
         </footer>
-        <CanvasCursor />
+        <SmoothFollower />
       </body>
     </html>
   );
