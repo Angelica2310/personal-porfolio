@@ -46,7 +46,7 @@ export default function NavBar() {
       <div className="lg:pl-20 pl-5">
         <ActiveLink href="/">
           <Image
-            src="/logo.png"
+            src="/logo1.png"
             alt="logo"
             height={0}
             width={0}
