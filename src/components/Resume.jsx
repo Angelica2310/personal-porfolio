@@ -21,21 +21,21 @@ export function TimelineDemo() {
             <div className="text-base text-[--grey] md:text-xl">
               •{" "}
               <span className="font-bold">
-                Teaching Assistant / Location Lead
-              </span>{" "}
-              – Mentored junior developers in JavaScript, React, and API
-              integration. Supported troubleshooting and code reviews,
-              developing strong problem-solving and communication skills.
-            </div>
-            <div className="text-base text-[--grey] md:text-xl">
-              •{" "}
-              <span className="font-bold">
                 Junior Software Developer (TAG Retail Systems)
               </span>{" "}
               – Built features for a production- ready Vue.js application within
               a small agile team. Integrated REST APIs with a C# backend
               engineer, wrote and tested reusable components, and debugged
               cross-system issues to ensure reliability.
+            </div>
+            <div className="text-base text-[--grey] md:text-xl">
+              •{" "}
+              <span className="font-bold">
+                Teaching Assistant / Location Lead
+              </span>{" "}
+              – Mentored junior developers in JavaScript, React, and API
+              integration. Supported troubleshooting and code reviews,
+              developing strong problem-solving and communication skills.
             </div>
           </div>
         </div>

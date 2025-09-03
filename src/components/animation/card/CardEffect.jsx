@@ -14,8 +14,10 @@ export function ThreeDCardDemo() {
       id: 1,
       src: "/restaurant.png",
       title: "Restaurant website",
-      description:
-        "Independently learned and implemented a booking system with EmailJS integration, enhancing user interaction without a backend. Built using Next.js and Tailwind CSS, with embedded Google Maps and review features; deployed to Vercel.",
+      description1:
+        "Independently learned and implemented a booking site with EmailJS integration, enhancing user interaction without a backend. Built using Next.js and Tailwind CSS, with embedded Google Maps and review features, enhancing usability and customer confidence.",
+      description2:
+        "Tested across devices and browsers to deliver a robust, responsive platform for real-world use.",
       github: "https://github.com/Angelica2310/restaurant-web",
       demo: "https://restaurant-web-self.vercel.app/",
     },
@@ -23,8 +25,10 @@ export function ThreeDCardDemo() {
       id: 2,
       src: "/e-commerce.png",
       title: "E-commerce shopping",
-      description:
-        "Developed a full-stack e-commerce marketplace in a team of four over 1.5 weeks, featuring Stripe payments, Clerk authentication, and AWS image handling. Built with Next.js and PostgreSQL; collaborated on architecture and version control using GitHub Projects.",
+      description1:
+        "Collaborated in an agile team to build a Next.js marketplace, featuring Stripe payments, Clerk authentication, and AWS image handling, delivering a secure MVP under tight deadlines.",
+      description2:
+        "Integrated PostgreSQL APIs and reusable components, ensuring reliable features and consistent user experience.",
       github: "https://github.com/Angelica2310/3bay-app",
       demo: "https://3bay-app.vercel.app/",
     },
@@ -32,8 +36,10 @@ export function ThreeDCardDemo() {
       id: 3,
       src: "/ratingsystem.png",
       title: "Rating system",
-      description:
-        "Applied bootcamp knowledge to build an interactive brand rating platform with a connected backend, then self-learned Chart.js to add real-time data visualisation. Integrated Clerk authentication and Radix-based forms to create a smooth and engaging user experience.",
+      description1:
+        "Applied bootcamp knowledge to build an interactive brand rating platform with a connected backend and Clerk authentication, self-learned Chart.js to add real-time data visualisation, providing secure collection and display of feedback.",
+      description2:
+        "Delivered interactive visualisations with responsive UI, improving engagement and clarity of insights.",
       github: "https://github.com/Angelica2310/rating-system",
       demo: "https://rating-system-beta.vercel.app/",
     },
@@ -41,8 +47,10 @@ export function ThreeDCardDemo() {
       id: 4,
       src: "/expensetracker.png",
       title: "Expense Tracker",
-      description:
-        "The app uses React Router DOM for smooth navigation and requires users to sign up and log in to access their personal tracker. Data is managed through an Express server with SQL, storing user accounts and transactions. Users can add or delete transactions, with real-time balance updates and color indicators for income and expenses. The UI is responsive, and access to the tracker is restricted to authenticated users only.",
+      description1:
+        "Built a full-stack tracker with React Router, Express, and SQL, enabling secure user authentication, account management, and real-time balance updates.",
+      description2:
+        "Designed responsive UI with clear income/expense indicators, ensuring users could easily track finances across devices.",
       github: "https://github.com/Angelica2310/expense-tracker",
       demo: "https://expense-tracker-client-xldz.onrender.com/",
     },
@@ -50,8 +58,10 @@ export function ThreeDCardDemo() {
       id: 5,
       src: "/quizgame.png",
       title: "Quiz Quest Game",
-      description:
-        "A mini full-stack application built with Node.js and Vite, where users can register their names to play. The game generates 10 random questions, fetched from an Express-based database. Users can choose hints such as 50/50 or Ask the Audience. A live leaderboard displays scores, and users can generate a certificate upon completing the game.",
+      description1:
+        "Developed a Node.js + Vite quiz app with randomised questions from an Express database, offering hints like 50/50 and Ask the Audience.",
+      description2:
+        "Added a live leaderboard and completion certificates, making the game engaging, competitive, and rewarding for users.",
       github: "https://github.com/Angelica2310/quiz-quest-game",
       demo: "https://quiz-quest-game-client.onrender.com/",
     },
@@ -59,8 +69,10 @@ export function ThreeDCardDemo() {
       id: 6,
       src: "/cookiegame.png",
       title: "Cookie Clicker Game",
-      description:
-        "The game is built in React and Vite, with features sound effects and stylish UI elements to create an enjoyable, engaging experience. Users can play and purchase upgrade items, with item data fetched from an API, and progress is saved to local storage so they can resume where they left off. Upgrade buttons are disabled when users don't have enough cookies, adding a strategic layer to the gameplay. The game is also fully responsive, ensuring a smooth experience across all devices.",
+      description1:
+        "Created a React + Vite clicker game with sound effects, API-driven upgrade items, and local storage for progress persistence.",
+      description2:
+        "Implemented responsive UI and purchase mechanics with disabled buttons, enhancing strategy and user experience across devices.",
       github: "https://github.com/Angelica2310/cookies-clicker-vite",
       demo: "https://cookies-clicker-vite.onrender.com/",
     },
@@ -69,7 +81,7 @@ export function ThreeDCardDemo() {
     <div className="gap-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-15 md:w-[80vw]">
       {projects.map((project) => (
         <CardContainer key={project.id} className="inter-var md:pb-20 pb-16">
-          <CardBody className="bg-green-600/10 relative group/card border-black/[0.1] w-[90vw] md:w-full max-w-[350px] md:max-w-[40vw] lg:h-[65vh] md:h-[75vh] h-[70vh] rounded-xl p-6 border font-serif flex flex-col items-center hover:cursor-pointer">
+          <CardBody className="bg-green-600/10 relative group/card border-black/[0.1] w-[90vw] md:w-full max-w-[350px] md:max-w-[40vw] md:h-[75vh] h-auto rounded-xl p-6 border font-serif flex flex-col items-center hover:cursor-pointer">
             <CardItem translateZ={60}>
               <Image
                 src={project.src}
@@ -83,7 +95,8 @@ export function ThreeDCardDemo() {
               <p className="pt-5 text-xl text-[--grey]">{project.title}</p>
             </CardItem>
             <CardItem translateZ={20}>
-              <p className="text-justify">{project.description}</p>
+              <p className="text-justify">• {project.description1}</p>
+              <p className="text-justify">• {project.description2}</p>
             </CardItem>
             <div className="flex gap-3 py-7">
               <CardItem translateZ={10}>

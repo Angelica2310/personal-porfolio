@@ -346,7 +346,7 @@ body {
 
 /* cursor */
 @media (max-width: 768px) {
-  #canvas {
-    display: none;
+  .custom-cursor {
+    display: none !important;
   }
 }
