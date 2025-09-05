@@ -62,6 +62,13 @@ export const Timeline = ({ data }) => {
               I’m always up for learning something new and excited to grow as a
               developer while working on real-world projects.
             </h2>
+            <a
+              href="/cv.pdf"
+              download="Giang(Angelica)-Le-CV"
+              className="mt-3 text-red-700 block cursor-pointer"
+            >
+              Download CV
+            </a>
           </div>
         </div>
         <TextShimmerWave className="text-2xl md:text-4xl mt-[10%]" duration={1}>

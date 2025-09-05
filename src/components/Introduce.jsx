@@ -1,6 +1,7 @@
 import React from "react";
 import { TiltCard1 } from "./animation/tilteffect/TiltImg";
 import ScrollReveal from "./animation/ScrollEffect";
+import Link from "next/link";
 
 export default function Introduce() {
   return (
@@ -16,12 +17,12 @@ export default function Introduce() {
             baseRotation={5}
             blurStrength={10}
           >
-            <p className="font-sans">
+            <p className="font-sans pb-4">
               I am a tech enthusiast passionate about coding and
               problem-solving. I enjoy exploring new technologies and expanding
               my skills.
             </p>
-            <p className="font-sans">
+            <p className="font-sans pb-4">
               I specialize in <span className="text-[--grey]">React</span>{" "}
               development, using
               <span className="text-[--grey]"> Next.js</span> or{" "}
@@ -29,7 +30,7 @@ export default function Introduce() {
               <span className="text-[--grey]">Tailwind CSS </span>
               for sleek, responsive designs.
             </p>
-            <p className="font-sans">
+            <p className="font-sans pb-4">
               I also have experience working with{" "}
               <span className="text-[--grey]">
                 Vue.js, Bootstrap, SQL databases, RESTful APIs
@@ -37,10 +38,16 @@ export default function Introduce() {
               , and integrating front-end apps with back-end services built in
               C#.
             </p>
-            <p className="font-sans">
+            <p className="font-sans pb-6">
               Always eager to learn, I love tackling new challenges and building
               innovative solutions through code!
             </p>
+            <Link
+              href="/project"
+              className="bg-[--background] px-6 py-2.5 rounded-lg cursor-pointer text-[--green] text-sm tracking-wider font-semibold outline-none border border-gray-300 shadow-[0_4px_20px_rgba(34,197,94,0.8)] hover:shadow-[0_6px_24px_rgba(34,197,94,1)] active:shadow-inner transition"
+            >
+              View My Projects
+            </Link>
           </ScrollReveal>
         </div>
       </div>
