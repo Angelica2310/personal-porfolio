@@ -141,7 +141,7 @@ export default {
       wordsets: {
         jobroles: {
           words: [
-            "Junior Software Developer",
+            "Software Developer",
             "Enthusiastic About Technology & Problem Solving",
           ],
           delay: 3,
