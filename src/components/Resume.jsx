@@ -5,6 +5,35 @@ import { ExpandableResume } from "./ExpandableResume";
 
 export function TimelineDemo() {
   const data = [
+     {
+      title: "Apr 2026 - Present",
+      content: (
+        <div>
+          <div className="text-base font-normal text-[--grey] md:text-xl flex gap-2">
+            <MapPinCheckInside />
+            <p>IDHL</p>
+          </div>
+          <div className="mb-8 text-base font-extrabold text-[--grey] md:text-xl flex gap-2">
+            <Captions />
+            UI Developer (Shopify platform)
+          </div>
+           <div className="mb-8 leading-8">
+            <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
+              •  Develop and maintain Shopify themes using Liquid, JavaScript, and OOP principles
+            </div>
+            <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
+              • Debug platform issues and support ongoing client Support Desk tickets
+            </div>
+            <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
+              • Work with Shopify metafields, metaobjects, and GraphQL Admin/Storefront APIs
+            </div>
+              <div className="flex items-center gap-2 text-base text-[--grey] md:text-xl">
+              • Collaborate with developers, PMs, and account managers to deliver features on time
+            </div>
+          </div>
+        </div>
+      ),
+    },
     {
       title: "Sep 2024 - Mar 2025",
       content: (

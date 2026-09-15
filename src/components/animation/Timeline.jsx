@@ -29,8 +29,8 @@ export const Timeline = ({ data }) => {
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-10 flex flex-col justify-center items-center leading-relaxed tracking-wide mt-4">
         <div className="flex flex-col md:flex-row gap-16 mt-[30%] md:mt-[10%] items-center">
           <ProfileCard
-            name="Giang Le"
-            title="Junior Software Developer"
+            name="Angelica Giang Le"
+            title="UI Developer"
             handle="giangle"
             status="Online"
             contactText="My LinkedIn"
@@ -46,29 +46,31 @@ export const Timeline = ({ data }) => {
           />
           <div className="font-sans">
             <h2 className="text-lg md:text-2xl max-w-4xl">
-              I’m a passionate and curious developer who loves building things
-              with code.
+              I’m currently working as a UI Developer, passionate about
+              building clean, functional interfaces.
             </h2>
             <h2 className="text-lg md:text-2xl max-w-4xl mt-3">
-              I’ve completed the Software Development Bootcamp and hold
-              Microsoft Azure Fundamentals (AZ-900) certification
+              I hold Microsoft Azure Fundamentals (AZ-900) and Shopify
+              certifications (Developing Apps for Shopify, Shopify Development
+              Fundamentals).
             </h2>
             <h2 className="text-lg md:text-2xl max-w-4xl mt-3">
-              I’ve worked with JavaScript, React, Next.js, Vue, and styled
-              projects using Tailwind and Bootstrap. I’m comfortable with SQL,
-              REST APIs, and connecting front-ends to back-ends with C#.
+              I’ve worked with JavaScript, React, Next.js, Vue, and Shopify
+              Liquid, styling projects using Tailwind and Bootstrap. I’m
+              comfortable with SQL, REST APIs, and connecting front-ends to
+              back-ends with Node.js and Express.
             </h2>
             <h2 className="text-lg md:text-2xl max-w-4xl mt-3">
               I’m always up for learning something new and excited to grow as a
               developer while working on real-world projects.
             </h2>
-            <a
+            {/* <a
               href="/cv.pdf"
               download="Giang(Angelica)-Le-CV"
               className="mt-3 text-red-700 block cursor-pointer"
             >
               Download CV
-            </a>
+            </a> */}
           </div>
         </div>
         <TextShimmerWave
