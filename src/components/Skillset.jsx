@@ -30,6 +30,8 @@ const frameworks = [
   { id: 8, src: "/tailwind.png" },
   { id: 9, src: "/vuejs.png" },
   { id: 10, src: "/bootstrap.png" },
+  { id: 11, src: "/shopify.png" },
+  { id: 12, src: "/liquid.png", filterBlack: true },
 ];
 
 export default function Skillset() {
@@ -42,7 +44,13 @@ export default function Skillset() {
         {frameworks.map((framework) => (
           <div key={framework.id} className="card">
             <div className="w-[25vw] md:w-[13vw] h-24 md:h-32 lg:h-40 flex justify-center items-center p-2 hover:scale-105 transition-transform duration-200 overflow-hidden">
-              <Image src={framework.src} alt="img" width={50} height={50} />
+              <Image
+                src={framework.src}
+                alt="img"
+                width={50}
+                height={50}
+                className={framework.filterBlack ? "brightness-0" : ""}
+              />
             </div>
           </div>
         ))}
