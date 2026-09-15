@@ -23,9 +23,10 @@ export default function Introduce() {
               come from <span className="text-[--grey]">Viet Nam</span>.
             </p>
             <p className="font-sans">
-              My background is in business management, but I recently completed
-              a Software Development Bootcamp. I have a strong enthusiasm for
-              technology and have finally found the right path for my career.
+              I'm currently working as a{" "}
+              <span className="text-[--grey]">UI Developer</span>. My
+              background is in business management, but my passion for
+              technology led me to make the switch into development.
             </p>
             <blockquote className="font-sans text-base md:text-xl lg:text-2xl w-[90%] mx-auto my-10 text-[#555555] py-4 px-7 pl-10 border-l-8 border-[--pink] leading-relaxed relative bg-[rgb(237,237,237,0.7)]">
               <div className="before:content-['\201C'] before:text-[--pink] before:text-7xl before:absolute before:left-4 before:-top-4">
