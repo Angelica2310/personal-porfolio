@@ -1,6 +1,11 @@
 "use client";
 
-import { Environment, OrbitControls, ContactShadows } from "@react-three/drei";
+import {
+  Environment,
+  OrbitControls,
+  ContactShadows,
+  Float,
+} from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import { Model } from "./Computer";
@@ -11,7 +16,9 @@ function GenerateModel() {
         <ambientLight intensity={0.5} />
         <OrbitControls enableZoom={false} />
         <Suspense fallback={null}>
-          <Model position={[0, -2, -1]} />
+          <Float speed={1.5} rotationIntensity={0.4} floatIntensity={0.6}>
+            <Model position={[0, -2, -1]} />
+          </Float>
         </Suspense>
         <Environment preset="sunset" />
         <ContactShadows

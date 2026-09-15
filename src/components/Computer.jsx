@@ -9,12 +9,14 @@ Title: Potted Plant, Mediterranean flowering, low poly
 
 import React from "react";
 import { useGLTF } from "@react-three/drei";
+import { useMediaQuery } from "react-responsive";
 
 export function Model(props) {
   const { nodes, materials } = useGLTF("/computer.gltf");
+  const isMobile = useMediaQuery({ maxWidth: 767 });
   return (
     <group {...props} dispose={null}>
-      <group rotation={[-Math.PI / 3, 0, -6]} scale={1}>
+      <group rotation={[-Math.PI / 3, 0, -6]} scale={isMobile ? 0.8 : 1.1}>
         <mesh geometry={nodes.Object_2.geometry} material={materials.Brown} />
         <mesh geometry={nodes.Object_3.geometry} material={materials.Brown} />
         <mesh geometry={nodes.Object_4.geometry} material={materials.White} />
