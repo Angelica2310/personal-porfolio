@@ -275,7 +275,7 @@ const ProfileCardComponent = ({
   return (
     <div
       ref={wrapRef}
-      className={`pc-card-wrapper ${className}`.trim()}
+      className={`font-sans pc-card-wrapper ${className}`.trim()}
       style={cardStyle}
     >
       <section ref={cardRef} className="pc-card">

@@ -81,7 +81,7 @@ export function ThreeDCardDemo() {
     <div className="gap-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-15 px-6">
       {projects.map((project) => (
         <CardContainer key={project.id} className="inter-var md:pb-20 pb-16">
-          <CardBody className="bg-green-600/10 relative group/card border border-black/10 w-[90vw] md:w-full max-w-[350px] md:max-w-[40vw] lg:max-w-[30vw] xl:max-w-[25vw] xl:h-[70vh] h-auto md:max-h-[100vh] lg:max-h-[100vh] rounded-xl p-6 font-serif flex flex-col items-center hover:cursor-pointer">
+          <CardBody className="bg-green-600/10 relative group/card border border-black/10 w-[90vw] md:w-full max-w-[350px] md:max-w-[40vw] lg:max-w-[30vw] xl:max-w-[25vw] xl:h-[70vh] h-auto md:max-h-[100vh] lg:max-h-[100vh] rounded-xl p-6 font-sans flex flex-col items-center hover:cursor-pointer">
             <CardItem translateZ={60}>
               <Image
                 src={project.src}
@@ -95,8 +95,12 @@ export function ThreeDCardDemo() {
               <p className="pt-5 text-xl text-[--grey]">{project.title}</p>
             </CardItem>
             <CardItem translateZ={20}>
-              <p className="text-justify">• {project.description1}</p>
-              <p className="text-justify">• {project.description2}</p>
+              <p className="leading-relaxed tracking-wide">
+                • {project.description1}
+              </p>
+              <p className="leading-relaxed tracking-wide mt-4">
+                • {project.description2}
+              </p>
             </CardItem>
             <div className="flex gap-3 py-7">
               <CardItem translateZ={10}>

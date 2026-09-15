@@ -84,7 +84,7 @@ export function ExpandableResume() {
                   <div className="">
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
-                      className="font-bold text-[--grey] md:text-4xl text-2xl"
+                      className="font-sans font-bold text-[--grey] md:text-4xl text-2xl"
                     >
                       {active.title}
                     </motion.h3>
@@ -129,7 +129,7 @@ export function ExpandableResume() {
               <div className="">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-[--grey] text-center md:text-left text-2xl"
+                  className="font-sans font-medium text-[--grey] text-center md:text-left text-xl"
                 >
                   {card.title}
                 </motion.h3>

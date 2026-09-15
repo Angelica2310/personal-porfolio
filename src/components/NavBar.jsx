@@ -61,7 +61,7 @@ export default function NavBar() {
           <MenuPage />
         </div>
 
-        <div className="hidden md:animate-fadein text-2xl md:grid md:grid-cols-5 md:gap-8 items-center tracking-wider justify-center pr-4">
+        <div className="font-sans hidden md:animate-fadein text-xl md:grid md:grid-cols-5 md:gap-8 items-center tracking-wider justify-center pr-4">
           <ActiveLink href="/" variant="navBar">
             <div className="grid grid-cols-[auto,auto] gap-2 items-center">
               <House />

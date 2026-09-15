@@ -39,7 +39,7 @@ export default function MenuPage() {
       <DropDownMenu.Portal>
         <DropDownMenu.Content
           sideOffset={25}
-          className="text-black w-screen mr-2 rounded-md bg-[--background] p-[5px] shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)] will-change-[opacity,transform] data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade data-[side=right]:animate-slideLeftAndFade data-[side=top]:animate-slideDownAndFade flex flex-col items-center z-40"
+          className="font-sans text-black w-screen mr-2 rounded-md bg-[--background] p-[5px] shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)] will-change-[opacity,transform] data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade data-[side=right]:animate-slideLeftAndFade data-[side=top]:animate-slideDownAndFade flex flex-col items-center z-40"
         >
           <Link href="/">
             <DropDownMenu.Item className="relative flex h-[45px] select-none items-center rounded-[3px] px-4 text-[20px] leading-none text-darktext outline-none  hover:text-[--pink]">

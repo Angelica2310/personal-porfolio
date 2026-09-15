@@ -26,7 +26,7 @@ export const Timeline = ({ data }) => {
 
   return (
     <div className="w-full md:px-10" ref={containerRef}>
-      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-10 text-justify flex flex-col justify-center items-center">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-10 flex flex-col justify-center items-center leading-relaxed tracking-wide mt-4">
         <div className="flex flex-col md:flex-row gap-16 mt-[30%] md:mt-[10%] items-center">
           <ProfileCard
             name="Giang Le"
@@ -71,7 +71,10 @@ export const Timeline = ({ data }) => {
             </a>
           </div>
         </div>
-        <TextShimmerWave className="text-2xl md:text-4xl mt-[10%]" duration={1}>
+        <TextShimmerWave
+          className="font-sans text-2xl md:text-4xl mt-[10%]"
+          duration={1}
+        >
           Here&apos;s a timeline of my journey ...
         </TextShimmerWave>
       </div>

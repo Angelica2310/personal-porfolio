@@ -4,9 +4,9 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col lg:flex-row md:text-xl lg:gap-40 justify-around items-center bg-green-800/50 p-4 gap-3 z-99 text-white">
-      <p>Designed and Developed by Angelica</p>
-      <p>Copyright © 2025 GL</p>
+    <div className="font-sans flex flex-col lg:flex-row md:text-xl lg:gap-40 justify-around items-center bg-green-800/50 p-4 gap-3 z-99 text-white">
+
+      <p>Copyright © {new Date().getFullYear()} GL</p>
       <div className="flex gap-3 lg:gap-8">
         <Link
           className="connect-icon"

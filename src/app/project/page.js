@@ -13,7 +13,7 @@ export default function ProjectPage() {
       <p className="uppercase font-sans self-center text-2xl lg:text-4xl">
         My latest <span className="text-[--grey]">works</span>
       </p>
-      <p className="pb-10 pt-3 text-xl lg:text-2xl">
+      <p className="font-sans pb-10 pt-3 text-xl lg:text-2xl">
         Some cool things I’ve worked on recently
       </p>
 
