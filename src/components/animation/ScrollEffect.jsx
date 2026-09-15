@@ -24,7 +24,7 @@ const ScrollReveal = ({
       return children.split(/(\s+)/).map((word, index) => {
         if (word.match(/^\s+$/)) return word;
         return (
-          <span className="inline-block word" key={index}>
+          <span className="word" key={index}>
             {word}
           </span>
         );
@@ -62,30 +62,13 @@ const ScrollReveal = ({
 
     const wordElements = el.querySelectorAll(".word");
 
-    gsap.fromTo(
-      wordElements,
-      { opacity: baseOpacity, willChange: "opacity" },
-      {
-        ease: "none",
-        opacity: 1,
-        stagger: 0.05,
-        scrollTrigger: {
-          trigger: el,
-          scroller,
-          start: "top bottom-=20%",
-          end: wordAnimationEnd,
-          scrub: true,
-        },
-      }
-    );
-
-    if (enableBlur) {
+    if (wordElements.length > 0) {
       gsap.fromTo(
         wordElements,
-        { filter: `blur(${blurStrength}px)` },
+        { opacity: baseOpacity, willChange: "opacity" },
         {
           ease: "none",
-          filter: "blur(0px)",
+          opacity: 1,
           stagger: 0.05,
           scrollTrigger: {
             trigger: el,
@@ -96,6 +79,25 @@ const ScrollReveal = ({
           },
         }
       );
+
+      if (enableBlur) {
+        gsap.fromTo(
+          wordElements,
+          { filter: `blur(${blurStrength}px)` },
+          {
+            ease: "none",
+            filter: "blur(0px)",
+            stagger: 0.05,
+            scrollTrigger: {
+              trigger: el,
+              scroller,
+              start: "top bottom-=20%",
+              end: wordAnimationEnd,
+              scrub: true,
+            },
+          }
+        );
+      }
     }
 
     return () => {
