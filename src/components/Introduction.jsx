@@ -6,31 +6,29 @@ export default function Introduction() {
   return (
     <div className="md:grid md:grid-cols-2 pt-[30%] md:py-[10%]">
       <div className=" pl-[10%] md:pl-[20%] md:pt-[40%] lg:pt-[30%] xl:pt-[20%]">
-        <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+        <div className="font-sans text-2xl md:text-3xl lg:text-4xl">
           <div className="flex gap-2 pb-2 md:pb-3 xl:pb-6">
-            <p>Hi There! </p>
+            <p>Hi</p>
             <p className="animate-wiggle"> 👋🏻 </p>
           </div>
-          <div className="flex gap-1 items-center">
-            <p>
-              My name is{" "}
-              <span className="text-[--grey]">Giang (Angelica) Le</span>
-            </p>
-            <BadgeEffect />
-          </div>
+          <p>
+            My name is{" "}
+            <span className="text-[--grey]">Angelica Giang Le</span>
+          </p>
         </div>
-        <p className="pt-10 md:pt-8 xl:pt-20 lg:pt-16 text-xl md:text-3xl lg:text-4xl xl:text-5xl text-[--grey] type-jobroles break-words"></p>
+        <p className="font-sans pt-8 md:pt-10 text-xl md:text-3xl lg:text-4xl text-[--grey] type-jobroles break-words"></p>
+        <div className="flex flex-wrap items-center gap-3 pt-8">
+          <span className="text-xs md:text-sm font-sans uppercase tracking-widest text-[--green] border-b border-[--green] pb-1">
+            Certifications
+          </span>
+          <BadgeEffect />
+        </div>
       </div>
       <div className="flex flex-col items-center">
-        <div className="animate-fadeInUp w-[50vw] h-[50vh]">
+        <div className="w-[50vw] h-[50vh]">
           <GenerateModel />
         </div>
-        <TextShimmerWave className="text-2xl md:text-4xl" duration={1}>
-          3D Interactive Object
-        </TextShimmerWave>
-        <p className="font-sans text-[--grey]">
-          "Build with ThreeJS - try spinning me around!"
-        </p>
+     
       </div>
     </div>
   );

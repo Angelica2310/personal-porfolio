@@ -30,7 +30,7 @@ export function BadgeEffect() {
   useOutsideClick(ref, () => setActive(null));
 
   return (
-    <div className="">
+    <div className="inline-block align-middle">
       <AnimatePresence>
         {active && typeof active === "object" && (
           <motion.div
@@ -65,19 +65,21 @@ export function BadgeEffect() {
               <CloseIcon />
             </motion.button>
             <motion.div
-              layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-[90vw] max-w-[450px] md:max-w-[550px] h-[60vh] md:h-fit md:max-h-[90%]  flex flex-col bg-[--background] rounded-3xl overflow-hidden"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              className="w-[90vw] max-w-[450px] md:max-w-[550px] h-fit max-h-[90vh] flex flex-col bg-[--background] rounded-3xl overflow-hidden"
             >
-              <motion.div layoutId={`image-${active.title}-${id}`}>
+              <div>
                 <img
                   width={200}
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-fill object-top"
+                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
-              </motion.div>
+              </div>
 
               <div>
                 <div className="flex justify-between items-start p-4"></div>
@@ -87,7 +89,7 @@ export function BadgeEffect() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-[--grey] font-sans text-base md:text-xl h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-[--grey] font-sans text-base md:text-xl h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
                     {typeof active.content === "function"
                       ? active.content()
@@ -99,19 +101,18 @@ export function BadgeEffect() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-4xl mx-auto w-full flex flex-col md:flex-row">
+      <ul className="flex flex-row md:gap-3">
         {cards.map((card, index) => (
           <motion.div
-            layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
             whileHover={{ y: -4 }}
-            className="group relative p-2 flex flex-col md:flex-row justify-between items-center rounded-xl cursor-pointer transform "
+            className="group relative p-0.5 flex flex-col md:flex-row justify-between items-center rounded-xl cursor-pointer transform "
           >
             <div className="flex gap-4 flex-col md:flex-row items-center">
-              <motion.div layoutId={`image-${card.title}-${id}`}>
+              <div>
                 {/* metallic border wrapper */}
-                <div className="relative p-[3px] rounded-full bg-gradient-to-r from-gray-300 via-gray-100 to-gray-400 shadow-md overflow-hidden">
+                <div className="relative p-[2px] rounded-full bg-gradient-to-r from-gray-300 via-gray-100 to-gray-400 shadow-md overflow-hidden">
                   {/* shine sweep overlay */}
                   <span
                     className="pointer-events-none absolute top-0 left-[-150%] h-full w-[60%]
@@ -121,17 +122,17 @@ export function BadgeEffect() {
                      group-hover:translate-x-[300%] animate-shine"
                   />
                   {/* inner card */}
-                  <div className="relative bg-white rounded-full p-2 flex justify-center items-center">
+                  <div className="relative bg-white rounded-full p-0.5 flex justify-center items-center">
                     <img
                       width={100}
                       height={100}
                       src={card.src}
                       alt={card.title}
-                      className="h-[2rem] w-auto md:h-[4rem] rounded-full object-cover object-top"
+                      className="h-[2rem] w-[2rem] md:h-[3rem] md:w-[3rem] rounded-full object-cover object-top"
                     />
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         ))}
@@ -183,6 +184,40 @@ const cards = [
           <p>Microsoft Certified: Azure Fundamentals (AZ-900)</p>
           <Link
             href="https://learn.microsoft.com/api/credentials/share/en-us/GiangLe-6769/D121C8960831F00E?sharingId=8289F237B07CA743"
+            target="_blank"
+          >
+            <span className="hover:text-[--pink]">Verify Credential </span> 👈🏻
+          </Link>
+        </div>
+      );
+    },
+  },
+  {
+    title: "Developing Apps for Shopify",
+    src: "/app-badge.jpg",
+    content: () => {
+      return (
+        <div>
+          <p>Developing Apps for Shopify</p>
+          <Link
+            href="https://www.credly.com/earner/earned/badge/42502446-6f71-408b-925c-7b9afa6ef3f8"
+            target="_blank"
+          >
+            <span className="hover:text-[--pink]">Verify Credential </span> 👈🏻
+          </Link>
+        </div>
+      );
+    },
+  },
+  {
+    title: "Shopify Development Fundamentals",
+    src: "/fundamental-badge.jpg",
+    content: () => {
+      return (
+        <div>
+          <p>Shopify Development Fundamentals</p>
+          <Link
+            href="https://www.credly.com/earner/earned/badge/d2959c1e-be37-40f6-9cb3-2f528575fff1"
             target="_blank"
           >
             <span className="hover:text-[--pink]">Verify Credential </span> 👈🏻

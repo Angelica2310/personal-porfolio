@@ -5,12 +5,12 @@ import Link from "next/link";
 
 export default function Introduce() {
   return (
-    <div className="grid md:grid-cols-[2fr_1fr] p-4 items-center pt-[30%] lg:pt-[10%] pl-10">
+    <div className="grid md:grid-cols-[2fr_1fr] items-center pt-[30%] lg:pt-[10%] pl-10 pr-10">
       <div className="md:w-3/4 mx-auto">
         <p className="text-4xl md:text-5xl uppercase mb-7 font-serif">
           Let me <span className="text-[--grey]">introduce</span> myself
         </p>
-        <div className="flex gap-5 lg:gap-8 flex-col text-xl md:text-2xl lg:text-3xl text-justify">
+        <div className="flex gap-5 lg:gap-8 flex-col text-xl md:text-2xl lg:text-3xl text-left md:text-justify">
           <ScrollReveal
             baseOpacity={0}
             enableBlur={true}
@@ -29,6 +29,13 @@ export default function Introduce() {
               <span className="text-[--grey]">Vite</span> for efficient and{" "}
               <span className="text-[--grey]">Tailwind CSS </span>
               for sleek, responsive designs.
+            </p>
+            <p className="font-sans pb-4">
+              I'm also{" "}
+              <span className="text-[--grey]">Shopify certified</span>,
+              building custom{" "}
+              <span className="text-[--grey]">Liquid themes and apps</span>{" "}
+              for e-commerce stores.
             </p>
             <p className="font-sans pb-4">
               I also have experience working with{" "}
