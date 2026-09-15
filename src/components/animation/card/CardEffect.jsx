@@ -23,36 +23,36 @@ export function ThreeDCardDemo() {
     },
     {
       id: 2,
-      src: "/e-commerce.png",
-      title: "E-commerce shopping",
+      src: "/bamboo-nail.png",
+      title: "Beauty Salon website",
       description1:
-        "Collaborated in an agile team to build a Next.js marketplace, featuring Stripe payments, Clerk authentication, and AWS image handling, delivering a secure MVP under tight deadlines.",
+        "Built a nail salon website with services, FAQ, and gallery sections, hardcoded client reviews, social media links, and WhatsApp-based booking for easy customer contact.",
       description2:
-        "Integrated PostgreSQL APIs and reusable components, ensuring reliable features and consistent user experience.",
-      github: "https://github.com/Angelica2310/3bay-app",
-      demo: "https://3bay-app.vercel.app/",
+        "Reusable components, ensuring reliable features and consistent user experience.",
+      github: "https://github.com/Angelica2310/bamboo-nail",
+      demo: "https://www.bamboonailshull.com/",
     },
     {
       id: 3,
-      src: "/ratingsystem.png",
-      title: "Rating system",
+      src: "/hessle-nail.png",
+      title: "Beauty Salon website",
       description1:
-        "Applied bootcamp knowledge to build an interactive brand rating platform with a connected backend and Clerk authentication, self-learned Chart.js to add real-time data visualisation, providing secure collection and display of feedback.",
+        "Built a nail salon website with services, contact, and gallery sections, integrated with the Google API for live reviews, and a custom booking system powered by a Next.js backend.",
       description2:
-        "Delivered interactive visualisations with responsive UI, improving engagement and clarity of insights.",
-      github: "https://github.com/Angelica2310/rating-system",
-      demo: "https://rating-system-beta.vercel.app/",
+        "Added an AI chatbot powered by the Claude API to answer customer questions and assist with bookings.",
+      github: "https://github.com/Angelica2310/hessle-nail",
+      demo: "https://hessle-nail-eight.vercel.app/",
     },
     {
       id: 4,
-      src: "/expensetracker.png",
-      title: "Expense Tracker",
+      src: "/mientay.png",
+      title: "Restaurant Website",
       description1:
-        "Built a full-stack tracker with React Router, Express, and SQL, enabling secure user authentication, account management, and real-time balance updates.",
+        "Built a full-stack restaurant website with React Router, Express, and SQL, enabling secure user authentication, account management, and real-time reservation updates.",
       description2:
-        "Designed responsive UI with clear income/expense indicators, ensuring users could easily track finances across devices.",
-      github: "https://github.com/Angelica2310/expense-tracker",
-      demo: "https://expense-tracker-client-xldz.onrender.com/",
+        "Included a custom booking system powered by a Next.js backend.",
+      github: "https://github.com/Angelica2310/mientay-res",
+      demo: "https://www.mientayshoreditch.co.uk/",
     },
     {
       id: 5,
@@ -80,8 +80,11 @@ export function ThreeDCardDemo() {
   return (
     <div className="gap-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-15 px-6">
       {projects.map((project) => (
-        <CardContainer key={project.id} className="inter-var md:pb-20 pb-16">
-          <CardBody className="bg-green-600/10 relative group/card border border-black/10 w-[90vw] md:w-full max-w-[350px] md:max-w-[40vw] lg:max-w-[30vw] xl:max-w-[25vw] xl:h-[70vh] h-auto md:max-h-[100vh] lg:max-h-[100vh] rounded-xl p-6 font-sans flex flex-col items-center hover:cursor-pointer">
+        <CardContainer
+          key={project.id}
+          className="inter-var md:pb-20 pb-16 h-full"
+        >
+          <CardBody className="bg-green-600/10 relative group/card border border-black/10 w-[90vw] md:w-full max-w-[350px] md:max-w-[40vw] lg:max-w-[30vw] xl:max-w-[25vw] h-full rounded-xl p-6 font-sans flex flex-col items-center justify-between hover:cursor-pointer">
             <CardItem translateZ={60}>
               <Image
                 src={project.src}
