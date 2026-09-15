@@ -226,4 +226,21 @@ const cards = [
       );
     },
   },
+  {
+    title: "Liquid Storefronts for Theme Developers",
+    src: "/app-badge.jpg",
+    content: () => {
+      return (
+        <div>
+          <p>Liquid Storefronts for Theme Developers</p>
+          <Link
+            href="https://www.credly.com/earner/earned/badge/40d922a3-4478-4d19-a76e-6f2f4fb03488"
+            target="_blank"
+          >
+            <span className="hover:text-[--pink]">Verify Credential </span> 👈🏻
+          </Link>
+        </div>
+      );
+    },
+  },
 ];
