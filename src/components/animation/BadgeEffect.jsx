@@ -89,7 +89,7 @@ export function BadgeEffect() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-[--grey] font-sans text-base md:text-xl h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-[--grey] font-sans text-base md:text-lg h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
                     {typeof active.content === "function"
                       ? active.content()
@@ -186,7 +186,7 @@ const cards = [
             href="https://learn.microsoft.com/api/credentials/share/en-us/GiangLe-6769/D121C8960831F00E?sharingId=8289F237B07CA743"
             target="_blank"
           >
-            <span className="hover:text-[--pink]">Verify Credential </span> 👈🏻
+            <span className="hover:text-[--green]">Verify Credential </span> 👈🏻
           </Link>
         </div>
       );
@@ -203,7 +203,7 @@ const cards = [
             href="https://www.credly.com/earner/earned/badge/42502446-6f71-408b-925c-7b9afa6ef3f8"
             target="_blank"
           >
-            <span className="hover:text-[--pink]">Verify Credential </span> 👈🏻
+            <span className="hover:text-[--green]">Verify Credential </span> 👈🏻
           </Link>
         </div>
       );
@@ -220,7 +220,7 @@ const cards = [
             href="https://www.credly.com/earner/earned/badge/d2959c1e-be37-40f6-9cb3-2f528575fff1"
             target="_blank"
           >
-            <span className="hover:text-[--pink]">Verify Credential </span> 👈🏻
+            <span className="hover:text-[--green]">Verify Credential </span> 👈🏻
           </Link>
         </div>
       );
@@ -237,7 +237,7 @@ const cards = [
             href="https://www.credly.com/earner/earned/badge/40d922a3-4478-4d19-a76e-6f2f4fb03488"
             target="_blank"
           >
-            <span className="hover:text-[--pink]">Verify Credential </span> 👈🏻
+            <span className="hover:text-[--green]">Verify Credential </span> 👈🏻
           </Link>
         </div>
       );

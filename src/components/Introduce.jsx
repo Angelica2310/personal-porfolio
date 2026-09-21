@@ -5,12 +5,12 @@ import Link from "next/link";
 
 export default function Introduce() {
   return (
-    <div className="grid md:grid-cols-[2fr_1fr] items-center pt-[30%] lg:pt-[10%] pl-10 pr-10">
+    <div className="grid md:grid-cols-[2fr_1fr] items-center pt-16 lg:pt-20 pl-10 pr-10">
       <div className="md:w-3/4 mx-auto">
-        <p className="text-4xl md:text-5xl uppercase mb-7 font-serif">
+        <p className="text-4xl uppercase mb-7 font-sans">
           Let me <span className="text-[--grey]">introduce</span> myself
         </p>
-        <div className="flex gap-5 lg:gap-8 flex-col text-xl md:text-2xl lg:text-3xl text-left md:text-justify">
+        <div className="flex gap-5 lg:gap-8 flex-col text-xl lg:text-2xl text-left">
           <ScrollReveal
             baseOpacity={0}
             enableBlur={true}
@@ -51,7 +51,7 @@ export default function Introduce() {
             </p>
             <Link
               href="/project"
-              className="bg-[--background] px-6 py-2.5 rounded-lg cursor-pointer text-[--green] text-sm tracking-wider font-semibold outline-none border border-gray-300 shadow-[0_4px_20px_rgba(34,197,94,0.8)] hover:shadow-[0_6px_24px_rgba(34,197,94,1)] active:shadow-inner transition"
+              className="bg-[--background] px-6 py-2.5 rounded-lg cursor-pointer text-[--green] text-sm tracking-wider font-semibold outline-none border border-gray-300 shadow-[0_4px_20px_rgba(21,128,61,0.8)] hover:shadow-[0_6px_24px_rgba(21,128,61,1)] active:shadow-inner transition"
             >
               View My Projects
             </Link>

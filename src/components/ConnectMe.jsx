@@ -6,8 +6,8 @@ Github;
 export default function ConnectMe() {
   return (
     <div className="flex flex-col justify-center items-center pt-10 md:pt-20 gap-5 pb-6 md:pb-12">
-      <p className="uppercase font-serif text-4xl">find me on</p>
-      <p className="font-sans text-xl md:text-2xl">
+      <p className="uppercase font-sans text-3xl">find me on</p>
+      <p className="font-sans text-xl">
         Feel free to <span className="text-[--grey]">connect</span> with me
       </p>
       <div className="flex gap-4">

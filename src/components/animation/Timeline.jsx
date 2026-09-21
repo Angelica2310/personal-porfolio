@@ -45,22 +45,22 @@ export const Timeline = ({ data }) => {
             }
           />
           <div className="font-sans">
-            <h2 className="text-lg md:text-2xl max-w-4xl">
+            <h2 className="text-lg md:text-xl max-w-4xl">
               I’m currently working as a UI Developer, passionate about
               building clean, functional interfaces.
             </h2>
-            <h2 className="text-lg md:text-2xl max-w-4xl mt-3">
+            <h2 className="text-lg md:text-xl max-w-4xl mt-3">
               I hold Microsoft Azure Fundamentals (AZ-900) and Shopify
               certifications (Developing Apps for Shopify, Shopify Development
               Fundamentals).
             </h2>
-            <h2 className="text-lg md:text-2xl max-w-4xl mt-3">
+            <h2 className="text-lg md:text-xl max-w-4xl mt-3">
               I’ve worked with JavaScript, React, Next.js, Vue, and Shopify
               Liquid, styling projects using Tailwind and Bootstrap. I’m
               comfortable with SQL, REST APIs, and connecting front-ends to
               back-ends with Node.js and Express.
             </h2>
-            <h2 className="text-lg md:text-2xl max-w-4xl mt-3">
+            <h2 className="text-lg md:text-xl max-w-4xl mt-3">
               I’m always up for learning something new and excited to grow as a
               developer while working on real-world projects.
             </h2>
@@ -74,7 +74,7 @@ export const Timeline = ({ data }) => {
           </div>
         </div>
         <TextShimmerWave
-          className="font-sans text-2xl md:text-4xl mt-[10%]"
+          className="font-sans text-2xl md:text-3xl mt-[10%]"
           duration={1}
         >
           Here&apos;s a timeline of my journey ...
@@ -90,7 +90,7 @@ export const Timeline = ({ data }) => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-[--green] flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-300 border border-[--green] p-2" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500  ">
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-4xl font-bold text-neutral-500  ">
                 {item.title}
               </h3>
             </div>
@@ -114,7 +114,7 @@ export const Timeline = ({ data }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-[--pink] via-red-400 to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-[--green] via-emerald-400 to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
       </div>

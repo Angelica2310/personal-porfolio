@@ -84,7 +84,7 @@ export function ThreeDCardDemo() {
           key={project.id}
           className="inter-var md:pb-20 pb-16 h-full"
         >
-          <CardBody className="bg-green-600/10 relative group/card border border-black/10 w-[90vw] md:w-full max-w-[350px] md:max-w-[40vw] lg:max-w-[30vw] xl:max-w-[25vw] h-full rounded-xl p-6 font-sans flex flex-col items-center justify-between hover:cursor-pointer">
+          <CardBody className="bg-[rgba(21,128,61,0.1)] relative group/card border border-black/10 dark:border-white/10 w-[90vw] md:w-full max-w-[350px] md:max-w-[40vw] lg:max-w-[30vw] xl:max-w-[25vw] h-full rounded-xl p-6 font-sans flex flex-col items-center justify-between hover:cursor-pointer">
             <CardItem translateZ={60}>
               <Image
                 src={project.src}

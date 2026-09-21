@@ -84,7 +84,7 @@ export function ExpandableResume() {
                   <div className="">
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
-                      className="font-sans font-bold text-[--grey] md:text-4xl text-2xl"
+                      className="font-sans font-bold text-[--grey] md:text-3xl text-2xl"
                     >
                       {active.title}
                     </motion.h3>
@@ -96,7 +96,7 @@ export function ExpandableResume() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-[--grey] font-sans text-base md:text-xl h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-[--grey] font-sans text-base md:text-lg h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
                     {typeof active.content === "function"
                       ? active.content()
@@ -233,7 +233,7 @@ const cards = [
             target="_blank"
           >
             •{" "}
-            <span className="hover:text-[--pink]">Canva design projects </span>{" "}
+            <span className="hover:text-[--green]">Canva design projects </span>{" "}
             👈🏻 <small>click me!</small>
           </Link>
         </div>
