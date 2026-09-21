@@ -1,94 +1,93 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
+
+const INTERACTIVE_SELECTOR = "a, button, img, input, textarea, select";
+const DOT_SMOOTHNESS = 0.2;
+const BORDER_DOT_SMOOTHNESS = 0.1;
+const BORDER_SIZE_IDLE = 28;
+const BORDER_SIZE_HOVER = 44;
+
 export default function SmoothFollower() {
-  const mousePosition = useRef({ x: 0, y: 0 });
-  const dotPosition = useRef({ x: 0, y: 0 });
-  const borderDotPosition = useRef({ x: 0, y: 0 });
-  const [renderPos, setRenderPos] = useState({
-    dot: { x: 0, y: 0 },
-    border: { x: 0, y: 0 },
-  });
-  const [isHovering, setIsHovering] = useState(false);
-  const DOT_SMOOTHNESS = 0.2;
-  const BORDER_DOT_SMOOTHNESS = 0.1;
+  const dotRef = useRef(null);
+  const borderRef = useRef(null);
+
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const mousePosition = { x: 0, y: 0 };
+    const dotPosition = { x: 0, y: 0 };
+    const borderDotPosition = { x: 0, y: 0 };
+    let isHovering = false;
+
     const handleMouseMove = (e) => {
-      mousePosition.current = { x: e.clientX, y: e.clientY };
+      mousePosition.x = e.clientX;
+      mousePosition.y = e.clientY;
     };
-    const handleMouseEnter = () => setIsHovering(true);
-    const handleMouseLeave = () => setIsHovering(false);
+    // Delegated on document so it keeps working after client-side
+    // navigation adds/removes interactive elements.
+    const handleMouseOver = (e) => {
+      if (e.target.closest(INTERACTIVE_SELECTOR)) {
+        isHovering = true;
+        borderRef.current.style.width = `${BORDER_SIZE_HOVER}px`;
+        borderRef.current.style.height = `${BORDER_SIZE_HOVER}px`;
+      }
+    };
+    const handleMouseOut = (e) => {
+      if (e.target.closest(INTERACTIVE_SELECTOR)) {
+        isHovering = false;
+        borderRef.current.style.width = `${BORDER_SIZE_IDLE}px`;
+        borderRef.current.style.height = `${BORDER_SIZE_IDLE}px`;
+      }
+    };
+
     window.addEventListener("mousemove", handleMouseMove);
-    const interactiveElements = document.querySelectorAll(
-      "a, button, img, input, textarea, select"
-    );
-    interactiveElements.forEach((element) => {
-      element.addEventListener("mouseenter", handleMouseEnter);
-      element.addEventListener("mouseleave", handleMouseLeave);
-    });
+    document.addEventListener("mouseover", handleMouseOver);
+    document.addEventListener("mouseout", handleMouseOut);
+
+    const lerp = (start, end, factor) => start + (end - start) * factor;
+
     const animate = () => {
-      const lerp = (start, end, factor) => {
-        return start + (end - start) * factor;
-      };
-      dotPosition.current.x = lerp(
-        dotPosition.current.x,
-        mousePosition.current.x,
-        DOT_SMOOTHNESS
-      );
-      dotPosition.current.y = lerp(
-        dotPosition.current.y,
-        mousePosition.current.y,
-        DOT_SMOOTHNESS
-      );
-      borderDotPosition.current.x = lerp(
-        borderDotPosition.current.x,
-        mousePosition.current.x,
+      dotPosition.x = lerp(dotPosition.x, mousePosition.x, DOT_SMOOTHNESS);
+      dotPosition.y = lerp(dotPosition.y, mousePosition.y, DOT_SMOOTHNESS);
+      borderDotPosition.x = lerp(
+        borderDotPosition.x,
+        mousePosition.x,
         BORDER_DOT_SMOOTHNESS
       );
-      borderDotPosition.current.y = lerp(
-        borderDotPosition.current.y,
-        mousePosition.current.y,
+      borderDotPosition.y = lerp(
+        borderDotPosition.y,
+        mousePosition.y,
         BORDER_DOT_SMOOTHNESS
       );
-      setRenderPos({
-        dot: { x: dotPosition.current.x, y: dotPosition.current.y },
-        border: {
-          x: borderDotPosition.current.x,
-          y: borderDotPosition.current.y,
-        },
-      });
-      requestAnimationFrame(animate);
+
+      dotRef.current.style.transform = `translate(${dotPosition.x}px, ${dotPosition.y}px) translate(-50%, -50%)`;
+      borderRef.current.style.transform = `translate(${borderDotPosition.x}px, ${borderDotPosition.y}px) translate(-50%, -50%)`;
+
+      animationId = requestAnimationFrame(animate);
     };
-    const animationId = requestAnimationFrame(animate);
+    let animationId = requestAnimationFrame(animate);
+
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      interactiveElements.forEach((element) => {
-        element.removeEventListener("mouseenter", handleMouseEnter);
-        element.removeEventListener("mouseleave", handleMouseLeave);
-      });
+      document.removeEventListener("mouseover", handleMouseOver);
+      document.removeEventListener("mouseout", handleMouseOut);
       cancelAnimationFrame(animationId);
     };
   }, []);
+
   return (
     <div className="pointer-events-none fixed inset-0 z-50 custom-cursor">
       <div
-        className="absolute rounded-full dark:bg-green bg-[--green] "
-        style={{
-          width: "8px",
-          height: "8px",
-          transform: "translate(-50%, -50%)",
-          left: `${renderPos.dot.x}px`,
-          top: `${renderPos.dot.y}px`,
-        }}
+        ref={dotRef}
+        className="absolute top-0 left-0 rounded-full bg-[--green]"
+        style={{ width: "8px", height: "8px" }}
       />
-
       <div
-        className="absolute rounded-full border dark:border-green border-[--green] "
+        ref={borderRef}
+        className="absolute top-0 left-0 rounded-full border border-[--green]"
         style={{
-          width: isHovering ? "44px" : "28px",
-          height: isHovering ? "44px" : "28px",
-          transform: "translate(-50%, -50%)",
-          left: `${renderPos.border.x}px`,
-          top: `${renderPos.border.y}px`,
+          width: `${BORDER_SIZE_IDLE}px`,
+          height: `${BORDER_SIZE_IDLE}px`,
           transition: "width 0.3s, height 0.3s",
         }}
       />
