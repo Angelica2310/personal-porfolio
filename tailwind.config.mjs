@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  media: false, // disable dark mode entirely
+  darkMode: "class", // toggled via a `dark` class on <html>, see ThemeToggle.jsx
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",

@@ -18,6 +18,7 @@ export default function BackgroundBox() {
         backgroundPosition: "center",
       }}
     >
+      <div className="pointer-events-none absolute inset-0 z-[1] dark:bg-[rgba(6,10,8,0.72)]" />
       <div className="element meteorPink meteorP-ani-1">
         <MeteorPink />
       </div>

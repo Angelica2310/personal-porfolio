@@ -7,13 +7,12 @@
   --green: rgb(21, 128, 61);
   --grey: #6b7280;
 }
-/* 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+
+:root.dark {
+  --background: #0d1210;
+  --green: rgb(74, 222, 128);
+  --grey: #d1d5db;
+}
 
 html,
 body,
@@ -26,7 +25,6 @@ body,
 body {
   color: var(--green);
   background: var(--background);
-  font-family: charm;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -35,7 +33,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-/* 
+
+/*
 @media (max-width: 768px) {
   body {
     background-attachment: scroll;
