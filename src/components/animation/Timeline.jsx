@@ -1,7 +1,7 @@
 "use client";
 import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
-import ProfileCard from "./profilecard/ProfileCard";
+import { Mascot } from "page-mascot";
 import { TextShimmerWave } from "./ShimmerText";
 
 export const Timeline = ({ data }) => {
@@ -28,21 +28,12 @@ export const Timeline = ({ data }) => {
     <div className="w-full md:px-10" ref={containerRef}>
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-10 flex flex-col justify-center items-center leading-relaxed tracking-wide mt-4">
         <div className="flex flex-col md:flex-row gap-16 mt-[30%] md:mt-[10%] items-center">
-          <ProfileCard
-            name="Angelica Giang Le"
-            title="UI Developer"
-            handle="giangle"
-            status="Online"
-            contactText="My LinkedIn"
-            avatarUrl="/giang.png"
-            showUserInfo={true}
-            enableTilt={true}
-            onContactClick={() =>
-              window.open(
-                "https://www.linkedin.com/in/giang-angelica-le/",
-                "_blank"
-              )
-            }
+          <Mascot
+            directions="/mascots/angelica-directions.webp"
+            reactions="/mascots/angelica-reactions.webp"
+            label="Angelica"
+            size={240}
+            className="shrink-0 self-center md:self-start"
           />
           <div className="font-sans">
             <h2 className="text-lg md:text-xl max-w-4xl">
